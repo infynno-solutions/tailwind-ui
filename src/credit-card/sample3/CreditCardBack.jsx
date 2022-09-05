@@ -13,7 +13,20 @@ const CreditCardBack = (props) => {
               <span>Not valid unless signed</span>
             </div>
             <div className="bg-[#E5E5E5] h-[22px] w-[190px] text-right">
-              <span className="text-[10px]">{creditCardDetails?.cvv}</span>
+              <span className="text-[10px]">
+                <input
+                  className="bg-transparent focus:outline-none focus:border border-black rounded-md text-right italic w-7 px-1"
+                  type="text"
+                  maxLength="3"
+                  value={creditCardDetails?.cvv}
+                  onChange={(e) => {
+                    props.setCreditCardDetails({
+                      ...creditCardDetails,
+                      cvv: e?.target?.value,
+                    });
+                  }}
+                />
+              </span>
             </div>
             <div className="text-left ml-1 mt-2">
               <p>
