@@ -1,7 +1,7 @@
 import React from "react";
 
 const CreditCardBack = (props) => {
-  const { creditCardDetails } = props || {};
+  const { creditCardDetails, error } = props || {};
   return (
     <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px]">
       <div>
@@ -15,11 +15,15 @@ const CreditCardBack = (props) => {
             <div className="bg-[#E5E5E5] h-[22px] w-[190px] text-right">
               <span className="text-[10px]">
                 <input
-                  className="bg-transparent focus:outline-none focus:border border-black rounded-md text-right italic w-7 px-1"
+                  className="bg-transparent focus:outline-none focus:border border-black rounded-md text-right italic w-6 pl-1"
                   type="text"
                   value={creditCardDetails?.cvv}
                   maxLength="3"
                   onChange={(e) => {
+                    const { value } = e?.target;
+                    value.length < 3
+                      ? props.setError({ ...error, cvv: true })
+                      : props.setError({ ...error, cvv: false });
                     props.setCreditCardDetails({
                       ...creditCardDetails,
                       cvv: e?.target?.value,

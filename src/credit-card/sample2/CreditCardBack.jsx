@@ -1,7 +1,7 @@
 import React from "react";
 
 const CreditCardBack = (props) => {
-  const { creditCardDetails } = props || {};
+  const { creditCardDetails, error } = props || {};
   return (
     <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-lg">
       <div>
@@ -20,6 +20,10 @@ const CreditCardBack = (props) => {
                   maxLength="3"
                   value={creditCardDetails?.cvv}
                   onChange={(e) => {
+                    const { value } = e?.target;
+                    value.length < 3
+                      ? props.setError({ ...error, cvv: true })
+                      : props.setError({ ...error, cvv: false });
                     props.setCreditCardDetails({
                       ...creditCardDetails,
                       cvv: e?.target?.value,
