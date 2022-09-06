@@ -4,23 +4,28 @@ import CreditCardFront from "./CreditCardFront";
 
 const CreditCard2 = () => {
   const [creditCardDetails, setCreditCardDetails] = useState(defaultData);
-  const handleSubmit = () => console.log(creditCardDetails);
+  const [error, setError] = useState({
+    number: false,
+    expiryDate: false,
+    cvv: false,
+  });
   return (
-    <div className="flex flex-col justify-center items-center gap-20 bg-[#373737] h-screen">
-      <div className=" flex items-center justify-center gap-20">
+    <div className="flex flex-col justify-center items-center md:gap-20 gap-14 bg-[#373737] h-screen">
+      <div className="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-12">
         <CreditCardFront
           creditCardDetails={creditCardDetails}
           setCreditCardDetails={setCreditCardDetails}
+          error={error}
+          setError={setError}
         />
         <CreditCardBack
           creditCardDetails={creditCardDetails}
           setCreditCardDetails={setCreditCardDetails}
+          error={error}
+          setError={setError}
         />
       </div>
-      <button
-        className="w-24 border border-blue-700 rounded-lg h-9 bg-blue-600 text-white hover:shadow-xl"
-        onClick={handleSubmit}
-      >
+      <button className="w-24 border border-blue-700 rounded-lg h-9 bg-blue-600 text-white hover:shadow-xl">
         SAVE
       </button>
     </div>

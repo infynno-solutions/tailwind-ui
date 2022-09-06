@@ -2,9 +2,10 @@ import React from "react";
 import MasterCardLogo from "./assets/mc_symbol.svg";
 import { AiOutlineCaretLeft } from "react-icons/ai";
 import { cc_format } from "../utils/helper";
+import moment from "moment/moment";
 
 const CreditCardFront = (props) => {
-  const { creditCardDetails } = props || {};
+  const { creditCardDetails, error } = props || {};
 
   return (
     <div className="flex flex-col gap-2">
@@ -25,9 +26,17 @@ const CreditCardFront = (props) => {
               type="text"
               value={cc_format(creditCardDetails?.number)}
               onChange={(e) => {
+                const { value } = e?.target;
+                let finalValue = value.replaceAll(" ", "");
+                isNaN(finalValue)
+                  ? props.setError({ ...error, number: true })
+                  : finalValue.length < 16
+                  ? props.setError({ ...error, number: true })
+                  : props.setError({ ...error, number: false });
+
                 props.setCreditCardDetails({
                   ...creditCardDetails,
-                  number: e?.target?.value,
+                  number: value,
                 });
               }}
             />
@@ -39,7 +48,7 @@ const CreditCardFront = (props) => {
               className="bg-transparent focus:outline-none focus:border border-black rounded-md px-1"
               type="text"
               value={creditCardDetails?.ownerName}
-              maxLength="22"
+              maxLength="21"
               onChange={(e) =>
                 props.setCreditCardDetails({
                   ...creditCardDetails,
@@ -57,8 +66,13 @@ const CreditCardFront = (props) => {
               onChange={(e) => {
                 const { value } = e?.target;
                 value.match(/^(0[1-9]|1[0-2])\/(([0-9]{4}|[0-9]{2})$)/)
-                  ? props.setError(false)
-                  : props.setError(true);
+                  ? value.slice(-2) < moment().format("YY")
+                    ? props.setError({ ...error, expiryDate: true })
+                    : value.slice(-2) === moment().format("YY") &&
+                      value.slice(0, 2) <= moment().format("MM")
+                    ? props.setError({ ...error, expiryDate: true })
+                    : props.setError({ ...error, expiryDate: false })
+                  : props.setError({ ...error, expiryDate: true });
                 props.setCreditCardDetails({
                   ...creditCardDetails,
                   expiryDate: value,
