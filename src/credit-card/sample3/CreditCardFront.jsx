@@ -1,7 +1,7 @@
 import React from "react";
 import chip from "./assets/chip.png";
 import { AiOutlineCaretLeft } from "react-icons/ai";
-import { cc_format } from "../utils/helper";
+import { cc_format } from "../sample1/utils/helper";
 import logo from "./assets/bank-logo.svg";
 import MasterCardLogo from "./assets/mc-symbol.svg";
 import moment from "moment";

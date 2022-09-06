@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineCaretLeft } from "react-icons/ai";
-import { cc_format } from "../utils/helper";
+import { cc_format } from "../sample1/utils/helper";
 import { SiVisa } from "react-icons/si";
 import moment from "moment";
 

@@ -26,9 +26,19 @@ const CreditCard3 = () => {
           setError={setError}
         />
       </div>
-      <button className="w-24 border border-blue-700 rounded-lg h-9 bg-blue-600 text-white hover:shadow-xl">
-        SAVE
-      </button>
+      {error.expiryDate || error.number || error.cvv ? (
+        <span className="text-xs text-red-600">
+          {error.expiryDate
+            ? "Please enter valid expiry date"
+            : error.number
+            ? "Please enter valid card number"
+            : "Please enter valid cvv"}
+        </span>
+      ) : (
+        <button className="w-24 border border-blue-700 rounded-sm h-9 bg-blue-600 text-white hover:shadow-xl">
+          SAVE
+        </button>
+      )}
     </div>
   );
 };

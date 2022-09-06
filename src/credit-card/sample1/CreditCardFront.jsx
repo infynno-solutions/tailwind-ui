@@ -1,7 +1,7 @@
 import React from "react";
 import MasterCardLogo from "./assets/mc_symbol.svg";
 import { AiOutlineCaretLeft } from "react-icons/ai";
-import { cc_format } from "../utils/helper";
+import { cc_format } from "./utils/helper";
 import moment from "moment/moment";
 
 const CreditCardFront = (props) => {
