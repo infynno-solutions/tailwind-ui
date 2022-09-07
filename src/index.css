@@ -26,3 +26,13 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.violet-bg {
+  background: rgb(36, 0, 27);
+  background: linear-gradient(
+    122deg,
+    rgba(36, 0, 27, 1) 0%,
+    rgba(92, 8, 80, 1) 45%,
+    rgba(92, 0, 108, 1) 100%
+  );
+}

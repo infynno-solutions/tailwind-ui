@@ -1,5 +1,9 @@
 export function cc_format(value) {
-  var v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
+  var v = value
+    .replace(/\s+/g, "")
+    .replace(/[^0-9]/gi, "")
+    .replace(/\D/g, "");
+
   var matches = v.match(/\d{4,16}/g);
   var match = (matches && matches[0]) || "";
   var parts = [];
@@ -11,6 +15,6 @@ export function cc_format(value) {
   if (parts.length) {
     return parts.join("  ");
   } else {
-    return value;
+    return v;
   }
 }

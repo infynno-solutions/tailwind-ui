@@ -10,8 +10,15 @@ const CreditCardFront = (props) => {
   const { creditCardDetails, error } = props || {};
 
   return (
-    <>
-      <div className="grid grid-cols-4 justify-between bg-[#210D09ED] text-white h-[186px] w-[277px] rounded-[10px] px-[14px] py-[6px] shadow-lg">
+    <div className="flex flex-col">
+      {(error.expiryDate || error.number) && (
+        <div className="text-xs text-red-600 h-9">
+          {error.expiryDate
+            ? "Please enter valid expiry date"
+            : "Please enter valid card number"}
+        </div>
+      )}
+      <div className="grid grid-cols-4 justify-between bg-[#210D09ED] text-white h-[186px] w-[277px] rounded-[10px] px-[14px] py-[6px] shadow-lg shadow-purple-700 transition duration-400 hover:scale-110">
         <div className="flex gap-2 col-span-3 flex-col text-left mt-2">
           <div className="text-xs font-bold text-[#FFFCFC]">
             BANK OF RUQMANIA
@@ -79,7 +86,7 @@ const CreditCardFront = (props) => {
           <img src={MasterCardLogo} className="w-12 h-9" alt="master-card" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

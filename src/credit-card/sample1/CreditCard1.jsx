@@ -11,34 +11,31 @@ const CreditCard1 = () => {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center md:gap-20 gap-14 bg-[#373737] h-screen">
-      <div className="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-12">
-        <CreditCardFront
-          creditCardDetails={creditCardDetails}
-          setCreditCardDetails={setCreditCardDetails}
-          error={error}
-          setError={setError}
-        />
-        <CreditCardBack
-          creditCardDetails={creditCardDetails}
-          setCreditCardDetails={setCreditCardDetails}
-          error={error}
-          setError={setError}
-        />
-      </div>
-      {error.expiryDate || error.number || error.cvv ? (
-        <span className="text-xs text-red-600">
-          {error.expiryDate
-            ? "Please enter valid expiry date"
-            : error.number
-            ? "Please enter valid card number"
-            : "Please enter valid cvv"}
-        </span>
-      ) : (
-        <button className="w-24 border border-blue-700 rounded-sm h-9 bg-blue-600 text-white hover:shadow-xl">
-          SAVE
+    <div className="flex flex-col justify-center items-center  bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 h-screen">
+      <div className="flex flex-col justify-center items-center md:gap-20 gap-14 h-4/5 bg-purple-800 border border-purple-800 shadow-sm  shadow-purple-700 rounded-3xl w-3/5">
+        <div className="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-12">
+          <CreditCardFront
+            creditCardDetails={creditCardDetails}
+            setCreditCardDetails={setCreditCardDetails}
+            error={error}
+            setError={setError}
+          />
+          <CreditCardBack
+            creditCardDetails={creditCardDetails}
+            setCreditCardDetails={setCreditCardDetails}
+            error={error}
+            setError={setError}
+          />
+        </div>
+
+        <button
+          className={`w-24 border border-yellow-500 rounded-lg h-9 bg-yellow-600 text-white hover:shadow-2xl font-medium
+        ${(error.expiryDate || error.number || error.cvv) && "opacity-70"}`}
+          disabled={error.expiryDate || error.number || error.cvv}
+        >
+          Save
         </button>
-      )}
+      </div>
     </div>
   );
 };

@@ -8,8 +8,15 @@ const CreditCardFront = (props) => {
   const { creditCardDetails, error } = props || {};
 
   return (
-    <>
-      <div className="flex flex-col justify-between bg-test-img bg-cover h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] shadow-lg">
+    <div className="flex flex-col">
+      {(error.expiryDate || error.number) && (
+        <div className="text-xs text-red-600 h-9">
+          {error.expiryDate
+            ? "Please enter valid expiry date"
+            : "Please enter valid card number"}
+        </div>
+      )}
+      <div className="flex flex-col justify-between bg-test-img bg-cover h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] shadow-sm shadow-purple-700 transition duration-400 hover:scale-110">
         <div className="flex justify-between leading-[14px] items-center">
           <span className="text-[13px] font-medium">American Express</span>
           <SiVisa className="h-[32px] w-12" />
@@ -78,7 +85,7 @@ const CreditCardFront = (props) => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
