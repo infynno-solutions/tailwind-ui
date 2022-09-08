@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/credit-card" element={<CreditCard />} />
         <Route path="/" element={<Home />} />
         <Route path="/credit-card/sample1" element={<CreditCard1 />} />
         <Route path="/credit-card/sample2" element={<CreditCard2 />} />

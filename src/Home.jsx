@@ -17,6 +17,9 @@ const Home = () => {
           <Link className="text-blue-800" to="/credit-card/sample3">
             - Sample 3
           </Link>
+          <h2 className="pt-10">
+            See Pricing Component by clicking below links
+          </h2>
           <div>
             <Link className="text-blue-800" to="/pricing/sample1">
               - Pricing Component Sample 1
