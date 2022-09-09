@@ -6,6 +6,7 @@ import CreditCard3 from "./credit-card/sample3/CreditCard3";
 import Home from "./Home";
 import Pricing1 from "./pricing/sample1/Pricing";
 import Pricing2 from "./pricing/sample2/Pricing";
+import Pricing3 from "./pricing/sample3/Pricing";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/credit-card/sample3" element={<CreditCard3 />} />
         <Route path="/pricing/sample1" element={<Pricing1 />} />
         <Route path="/pricing/sample2" element={<Pricing2 />} />
+        <Route path="/pricing/sample3" element={<Pricing3 />} />
       </Routes>
     </div>
   );

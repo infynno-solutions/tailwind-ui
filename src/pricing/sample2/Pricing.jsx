@@ -16,7 +16,6 @@ export default function Pricing() {
     "24/7 support",
     "Advanced analytics",
   ];
-  console.log(icon);
 
   return (
     <>
@@ -24,21 +23,17 @@ export default function Pricing() {
         <img
           src={banner}
           alt="not found"
-          className="h-screen w-full  opacity-50"
+          className="h-screen w-full opacity-50 hidden lg:inline-block"
         />
 
-        <container className="flex flex-col  top-0 w-full absolute lg:flex-row justify-center items-center h-screen gap-6  lg:px-5 xl:px-0">
+        <container className="flex flex-col top-0 w-full absolute lg:flex-row justify-center items-center lg:h-screen gap-6 lg:px-5 xl:px-0 py-8 lg:py-0">
           <div
             className="w-[360px] md:w-[384px] h-[572px] p-6 bg-white  group rounded-[20px] lg:hover:-translate-y-6 ease-in duration-300 hover:bg-[#0B0641] hover:text-white border xl:border-none border-[#0B0641]"
             onMouseOver={() => setIcon("1")}
             onMouseOut={() => setIcon("")}
           >
             <div className="flex flex-row gap-5 items-center">
-              <img
-                src={icon === "1" ? leftWhite : leftIcon}
-                alt="not found"
-                className="invert(90%) sepia(96%) saturate(3744%) hue-rotate(312deg) brightness(95%) contrast(82%);"
-              />
+              <img src={icon === "1" ? leftWhite : leftIcon} alt="not found" />
               <span className="text-3xl font-bold">Guardian</span>
             </div>
             <span className="flex mt-4 text-[#A9A9AA] text-[22px]">

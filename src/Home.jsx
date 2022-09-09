@@ -29,6 +29,11 @@ const Home = () => {
             <Link className="text-blue-800" to="/pricing/sample2">
               - Pricing component sample 2
             </Link>
+            <div>
+              <Link className="text-blue-800" to="/pricing/sample3">
+                - Pricing component Sample 3
+              </Link>
+            </div>
           </div>
         </div>
       </div>
