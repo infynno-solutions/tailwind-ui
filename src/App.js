@@ -7,6 +7,7 @@ import Home from "./Home";
 import Pricing1 from "./pricing/sample1/Pricing";
 import Pricing2 from "./pricing/sample2/Pricing";
 import Pricing3 from "./pricing/sample3/Pricing";
+import Pricing4 from "./pricing/sample4/Pricing";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/pricing/sample1" element={<Pricing1 />} />
         <Route path="/pricing/sample2" element={<Pricing2 />} />
         <Route path="/pricing/sample3" element={<Pricing3 />} />
+        <Route path="/pricing/sample4" element={<Pricing4 />} />
       </Routes>
     </div>
   );

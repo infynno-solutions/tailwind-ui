@@ -34,6 +34,11 @@ const Home = () => {
                 - Pricing component Sample 3
               </Link>
             </div>
+            <div>
+              <Link className="text-blue-800" to="/pricing/sample4">
+                - Pricing component Sample 4
+              </Link>
+            </div>
           </div>
         </div>
       </div>
