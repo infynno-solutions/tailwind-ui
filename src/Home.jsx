@@ -24,12 +24,12 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="bg-cc-bg-img h-screen px-20 py-10">
+      <div className="bg-cc-bg-img h-auto px-20 py-10">
         <Tab.Group vertical defaultIndex={0}>
           <div className="flex justify-center gap-0 ">
             <Tab.List className="flex justify-center gap-3 h-14 w-max bg-black bg-opacity-70 backdrop-blur-sm text-white p-2 rounded-lg duration-300">
               <Tab
-                className={`w-36 rounded-lg 
+                className={`sm:w-36 w-24 rounded-lg 
               ${
                 activeTab === "tab1"
                   ? "bg-white text-[#0B0641]"
@@ -40,7 +40,7 @@ const Home = () => {
                 Sample 1
               </Tab>
               <Tab
-                className={`w-36 rounded-lg 
+                className={`sm:w-36 w-24 rounded-lg 
               ${
                 activeTab === "tab2"
                   ? "bg-white text-[#0B0641]"
@@ -51,7 +51,7 @@ const Home = () => {
                 Sample 2
               </Tab>
               <Tab
-                className={`w-36 rounded-lg
+                className={`sm:w-36 w-24 rounded-lg
               ${
                 activeTab === "tab3"
                   ? "bg-white text-[#0B0641]"

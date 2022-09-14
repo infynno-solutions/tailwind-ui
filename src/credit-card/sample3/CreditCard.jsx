@@ -14,13 +14,13 @@ const CreditCard3 = ({ showCaseView }) => {
     <div
       className={`flex flex-col justify-center items-center bg-transparent ${
         showCaseView
-          ? "py-16"
+          ? "sm:py-16 py-5 "
           : "h-screen bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900 backdrop-blur-sm"
       }`}
     >
       <div
-        className={`flex flex-col justify-center items-center md:gap-20 bg-black bg-opacity-60 gap-14 h-4/5 shadow-sm rounded-3xl w-max px-24 ${
-          showCaseView && "py-20 "
+        className={`flex flex-col justify-center items-center md:gap-20 bg-black bg-opacity-60 gap-14 h-4/5 shadow-sm rounded-3xl w-max px-16 md:px-16 lg:px-20 ${
+          showCaseView && "sm:py-20 py-7 "
         }`}
       >
         <div className="flex md:flex-row flex-col items-center justify-center md:gap-20 gap-12">
