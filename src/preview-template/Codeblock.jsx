@@ -1,22 +1,17 @@
-import React, { useRef } from "react";
-import { CodeBlock, a11yDark } from "react-code-blocks";
-// eslint-disable-next-line import/no-webpack-loader-syntax
-const code = require("!!raw-loader!../App.js").default.toString();
+/* eslint-disable import/no-webpack-loader-syntax */
+import React from "react";
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const Codeblock = () => {
-  const ref = useRef();
-  console.log(ref.current?.contentWindow);
   return (
-    <>
-      <div className="text-sm text-left" ref={ref}>
-        <CodeBlock
-          text={code}
-          language="jsx"
-          showLineNumbers={false}
-          theme={a11yDark}
-        />
-      </div>
-    </>
+    <div className="text-sm text-left">
+      <CopyBlock
+        text={require("!!raw-loader!../pricing/sample3/Pricing.jsx").default.toString()}
+        language="jsx"
+        showLineNumbers={false}
+        theme={dracula}
+      />
+    </div>
   );
 };
 

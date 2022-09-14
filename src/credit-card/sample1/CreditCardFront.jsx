@@ -14,7 +14,7 @@ const CreditCardFront = (props) => {
   return (
     <div className="flex flex-col">
       {(error.expiryDate || error.number) && (
-        <div className="text-xs text-red-600 h-9">
+        <div className="text-xs text-red-600 h-6">
           {error.expiryDate
             ? "Please enter valid expiry date"
             : "Please enter valid card number"}

@@ -4,6 +4,7 @@ import Sample1 from "./credit-card/sample1/CreditCard";
 import Sample2 from "./credit-card/sample2/CreditCard";
 import Sample3 from "./credit-card/sample3/CreditCard";
 import React, { useState } from "react";
+import PreviewTemplate from "./PreviewTemplate";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -76,6 +77,7 @@ const Home = () => {
           </Tab.Panels>
         </Tab.Group>
       </div>
+      <PreviewTemplate path="/pricing/sample1" name="Pricing Component" />
     </>
   );
 };
