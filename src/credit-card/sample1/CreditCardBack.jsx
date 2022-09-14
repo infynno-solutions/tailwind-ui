@@ -9,7 +9,7 @@ const CreditCardBack = (props) => {
           Please enter valid cvv number
         </span>
       )}
-      <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-lg shadow-purple-700 transition duration-400 hover:scale-110">
+      <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-xl transition duration-400 hover:scale-110 sample1">
         <div>
           <div className="bg-black h-[34px] w-full" />
           <div className="flex justify-between">

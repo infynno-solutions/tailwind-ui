@@ -1,11 +1,12 @@
 import React from "react";
-import { AiOutlineCaretLeft } from "react-icons/ai";
-import { cc_format } from "../sample1/utils/helper";
+import { ReactComponent as LeftCaret } from "./assets/left-caret.svg";
+import { cc_format } from "../sample3/utils/helper";
 import { SiVisa } from "react-icons/si";
-import moment from "moment";
 
 const CreditCardFront = (props) => {
   const { creditCardDetails, error } = props || {};
+  let currentYear = new Date().getFullYear().toString();
+  var currentMonth = ("0" + (new Date().getMonth() + 1)).slice(-2);
 
   return (
     <div className="flex flex-col">
@@ -16,14 +17,15 @@ const CreditCardFront = (props) => {
             : "Please enter valid card number"}
         </div>
       )}
-      <div className="flex flex-col justify-between bg-test-img bg-cover h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] shadow-sm shadow-purple-700 transition duration-400 hover:scale-110">
+      <div className="flex flex-col justify-between bg-test-img bg-cover h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] shadow-xl transition duration-400 hover:scale-110 sample2">
         <div className="flex justify-between leading-[14px] items-center">
           <span className="text-[13px] font-medium">American Express</span>
           <SiVisa className="h-[32px] w-12" />
         </div>
         <div className="flex">
           <span className="flex items-center text-base top-3">
-            <AiOutlineCaretLeft className="text-xl" />
+            <LeftCaret className="text-xl mt-[2px] mr-1" />
+
             <input
               className="bg-transparent focus:outline-none focus:border border-black rounded-md px-1"
               type="text"
@@ -69,10 +71,10 @@ const CreditCardFront = (props) => {
               onChange={(e) => {
                 const { value } = e?.target;
                 value.match(/^(0[1-9]|1[0-2])\/(([0-9]{4}|[0-9]{2})$)/)
-                  ? value.slice(-2) < moment().format("YY")
+                  ? value.slice(-2) < currentYear.slice(-2)
                     ? props.setError({ ...error, expiryDate: true })
-                    : value.slice(-2) === moment().format("YY") &&
-                      value.slice(0, 2) <= moment().format("MM")
+                    : value.slice(-2) === currentYear.slice(-2) &&
+                      value.slice(0, 2) <= currentMonth
                     ? props.setError({ ...error, expiryDate: true })
                     : props.setError({ ...error, expiryDate: false })
                   : props.setError({ ...error, expiryDate: true });
