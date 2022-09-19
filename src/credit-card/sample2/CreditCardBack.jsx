@@ -1,9 +1,9 @@
 import React from "react";
 
 const CreditCardBack = (props) => {
-  const { creditCardDetails } = props || {};
+  const { creditCardDetails, error } = props || {};
   return (
-    <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px]">
+    <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-lg">
       <div>
         <div className="bg-black h-[34px] w-full" />
         <div className="flex justify-between">
@@ -13,7 +13,24 @@ const CreditCardBack = (props) => {
               <span>Not valid unless signed</span>
             </div>
             <div className="bg-[#E5E5E5] h-[22px] w-[190px] text-right">
-              <span className="text-[10px]">{creditCardDetails?.cvv}</span>
+              <span className="text-[10px]">
+                <input
+                  className="bg-transparent focus:outline-none focus:border border-black rounded-md text-right italic w-7 px-1"
+                  type="text"
+                  maxLength="3"
+                  value={creditCardDetails?.cvv}
+                  onChange={(e) => {
+                    const { value } = e?.target;
+                    value.length < 3
+                      ? props.setError({ ...error, cvv: true })
+                      : props.setError({ ...error, cvv: false });
+                    props.setCreditCardDetails({
+                      ...creditCardDetails,
+                      cvv: e?.target?.value,
+                    });
+                  }}
+                />
+              </span>
             </div>
             <div className="text-left ml-1 mt-2">
               <p>
