@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Tab } from "@headlessui/react";
-import Sample1 from "./credit-card/sample1/CreditCard";
-import Sample2 from "./credit-card/sample2/CreditCard";
-import Sample3 from "./credit-card/sample3/CreditCard";
+import Sample1 from "../credit-card/sample1/CreditCard";
+import Sample2 from "../credit-card/sample2/CreditCard";
+import Sample3 from "../credit-card/sample3/CreditCard";
 
 const CreditCardMain = () => {
   const [activeTab, setActiveTab] = useState("tab1");
