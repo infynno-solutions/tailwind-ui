@@ -1,15 +1,26 @@
 import React from "react";
 import MasterCardLogo from "./assets/mc_symbol.svg";
-import { AiOutlineCaretLeft } from "react-icons/ai";
-import { cc_format } from "../utils/helper";
-import moment from "moment/moment";
+import { ReactComponent as LeftCaret } from "./assets/left-caret.svg";
+import {
+  cc_expires_format,
+  cc_format,
+  currentMonth,
+  currentYear,
+} from "./utils/helper";
 
 const CreditCardFront = (props) => {
   const { creditCardDetails, error } = props || {};
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex flex-col justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] shadow-lg">
+    <div className="flex flex-col">
+      {(error.expiryDate || error.number) && (
+        <div className="text-xs text-red-600 h-6">
+          {error.expiryDate
+            ? "Please enter valid expiry date"
+            : "Please enter valid card number"}
+        </div>
+      )}
+      <div className="flex flex-col justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] transition duration-400  shadow-xl hover:scale-110 sample1">
         <div className="flex justify-between leading-[14px] items-center">
           <span className="text-[13px] font-medium">Credit Card</span>
           <img
@@ -20,7 +31,8 @@ const CreditCardFront = (props) => {
         </div>
         <div className="flex">
           <span className="flex items-center text-base top-3">
-            <AiOutlineCaretLeft className="text-xl mt-[2px]" />
+            <LeftCaret className="text-xl mt-[2px] mr-1" />
+
             <input
               className="bg-transparent focus:outline-none focus:border border-black rounded-md px-1"
               type="text"
@@ -61,15 +73,15 @@ const CreditCardFront = (props) => {
             <input
               className="bg-transparent focus:outline-none focus:border border-black rounded-md px-1 w-11"
               type="text"
-              value={creditCardDetails?.expiryDate}
+              value={cc_expires_format(creditCardDetails?.expiryDate)}
               maxLength="5"
               onChange={(e) => {
                 const { value } = e?.target;
                 value.match(/^(0[1-9]|1[0-2])\/(([0-9]{4}|[0-9]{2})$)/)
-                  ? value.slice(-2) < moment().format("YY")
+                  ? value.slice(-2) < currentYear.slice(-2)
                     ? props.setError({ ...error, expiryDate: true })
-                    : value.slice(-2) === moment().format("YY") &&
-                      value.slice(0, 2) <= moment().format("MM")
+                    : value.slice(-2) === currentYear.slice(-2) &&
+                      value.slice(0, 2) <= currentMonth
                     ? props.setError({ ...error, expiryDate: true })
                     : props.setError({ ...error, expiryDate: false })
                   : props.setError({ ...error, expiryDate: true });

@@ -40,7 +40,7 @@ export default function Pricing() {
               What You&apos;ll Get
             </span>
             {staticValue.map((data) => (
-              <div className="flex flex-row gap-[10px] items-start  mt-6 text-left text-lg">
+              <div className="flex flex-row gap-[10px] items-start mt-6 text-left text-lg">
                 <div className="pt-1 shrink-0">
                   <img
                     src={icon === "1" ? whiteRight : blackRight}
