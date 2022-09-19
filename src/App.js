@@ -8,7 +8,8 @@ import Pricing1 from "./pricing/sample1/Pricing";
 import Pricing2 from "./pricing/sample2/Pricing";
 import Pricing3 from "./pricing/sample3/Pricing";
 import Pricing4 from "./pricing/sample4/Pricing";
-import PreviewTemplate from "./PreviewTemplate";
+import PreviewTemplate from "./preview-template/PreviewTemplate";
+import Undefined from "./pages/undefined";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <Route path="/pricing/sample2" element={<Pricing2 />} />
         <Route path="/pricing/sample3" element={<Pricing3 />} />
         <Route path="/pricing/sample4" element={<Pricing4 />} />
-        <Route path="/preview" element={<PreviewTemplate />} />
+        <Route path="/preview/:module" element={<PreviewTemplate />} />
+        <Route path="/undefined" element={<Undefined />} />
       </Routes>
     </div>
   );

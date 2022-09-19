@@ -1,31 +1,16 @@
-import { Link } from "react-router-dom";
-import { Tab } from "@headlessui/react";
-import Sample1 from "./credit-card/sample1/CreditCard";
-import Sample2 from "./credit-card/sample2/CreditCard";
-import Sample3 from "./credit-card/sample3/CreditCard";
-import React, { useState } from "react";
-import PreviewTemplate from "./PreviewTemplate";
+/* eslint-disable no-lone-blocks */
+import React from "react";
+import Display from "./Home/Display";
 
 const Home = () => {
-  const [activeTab, setActiveTab] = useState("tab1");
-  return (
-    <>
-      <div className="p-10 h-screen">
-        <h2>HOME</h2>
-        <div className="flex flex-col text-left">
-          See Credit card samples by clicking below links
-          <Link className="text-blue-800" to="/credit-card/sample1">
-            - Sample 1
-          </Link>
-          <Link className="text-blue-800" to="/credit-card/sample2">
-            - Sample 2
-          </Link>
-          <Link className="text-blue-800" to="/credit-card/sample3">
-            - Sample 3
-          </Link>
-        </div>
-      </div>
-      <div className="bg-cc-bg-img h-auto px-20 py-10">
+  return <Display />;
+};
+
+export default Home;
+
+//  CREDITCARD TABS PAGE
+{
+  /* <div className="bg-cc-bg-img h-auto px-20 py-10">
         <Tab.Group vertical defaultIndex={0}>
           <div className="flex justify-center gap-0 ">
             <Tab.List className="flex justify-center gap-3 h-14 w-max bg-black bg-opacity-70 backdrop-blur-sm text-white p-2 rounded-lg duration-300">
@@ -76,10 +61,5 @@ const Home = () => {
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
-      </div>
-      <PreviewTemplate path="/pricing/sample1" name="Pricing Component" />
-    </>
-  );
-};
-
-export default Home;
+      </div>*/
+}

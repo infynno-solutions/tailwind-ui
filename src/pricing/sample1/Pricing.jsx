@@ -15,7 +15,7 @@ const Pricing = () => {
     "Create teams to collaborate on designs",
   ];
   return (
-    <container className="flex flex-col justify-center items-center  py-[72px]">
+    <container className="flex flex-col justify-center items-center py-[72px]">
       {/* heading section  */}
       <div className="flex flex-col w-auto px-6">
         <span className="font-medium text-[30px] md:text-[40px]">
@@ -38,7 +38,7 @@ const Pricing = () => {
                 id="small-toggle"
                 class="sr-only peer"
               />
-              <div class="w-9  h-5 flex-1 align-middle bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-9 h-5 flex-1 align-middle bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             </label>
           </div>
           <span>Pay yearly</span>
