@@ -16,19 +16,19 @@ const PreviewTemplate = () => {
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample1`,
+      path: `${module}/sample1`,
       name: `${moduleName} Sample 1`,
     },
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample2`,
+      path: `${module}/sample2`,
       name: `${moduleName} Sample 2`,
     },
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample3`,
+      path: `${module}/sample3`,
       name: `${moduleName} Sample 3`,
     },
   ]);
@@ -110,7 +110,10 @@ const PreviewTemplate = () => {
                   <BiLinkExternal
                     className="cursor-pointer text-gray-500 text-sm ml-4"
                     onClick={() =>
-                      window.open(`http://localhost:3000${data.path}`, "_blank")
+                      window.open(
+                        `${process.env.REACT_APP_URL}/${data.path}`,
+                        "_blank"
+                      )
                     }
                   />
                 </div>
@@ -122,7 +125,7 @@ const PreviewTemplate = () => {
                   title="Preview"
                   width={data.width}
                   className="h-[80vh] bg-white"
-                  src={`http://localhost:3000${data.path}`}
+                  src={`${process.env.REACT_APP_URL}/${data.path}`}
                 ></iframe>
               </div>
             ) : (
