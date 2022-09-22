@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ComponentList from "./ComponentList";
 import Introduction from "./Introduction";
+import { applicationUiData } from "../helper/applicationUI";
 
 const Display = () => {
   const elements = [
@@ -32,7 +33,7 @@ const Display = () => {
   const applicationUi = [
     {
       name: "Pricing Layouts",
-      components: 3,
+      components: applicationUiData.pricing.data.length,
       path: "/preview/pricing",
       background: pricingBg,
     },
