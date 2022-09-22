@@ -1,8 +1,8 @@
 import React from "react";
 
-const RadioButton = ({ disabled, inline }) => {
+const RadioButton = ({ disabled, inline, checked }) => {
   return (
-    <div className="flex h-screen justify-center items-center">
+    <div className="flex justify-center items-center py-5">
       <div className={`${inline && "flex gap-4"}`}>
         <div className="form-check form-check-inline">
           <input
@@ -25,6 +25,7 @@ const RadioButton = ({ disabled, inline }) => {
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault2"
+            disabled={disabled}
             checked
           />
           <label

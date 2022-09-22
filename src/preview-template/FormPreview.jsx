@@ -1,54 +1,63 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../Home/Footer";
 import { useParams } from "react-router-dom";
 import Button from "../Form/Button";
 import Input from "../Form/Input";
+import RadioButton from "../Form/RadioButton";
+import Header from "../Home/Header";
 
 const FormPreview = () => {
   const { module } = useParams();
-  let elements;
+  let elements, intro;
   switch (module) {
     case "buttons":
       elements = buttons;
+      intro = buttonIntro;
       break;
     case "inputs":
       elements = inputs;
+      intro = inputIntro;
+      break;
+    case "radio":
+      elements = radioButtons;
+      intro = radioIntro;
       break;
     default:
       elements = [];
   }
 
-  return (
-    <div className="flex flex-col gap-3 h-screen py-12 px-24 text-left">
-      <div className="flex flex-col gap-3 border-b border-gray-200 pb-4 mb-5">
-        <span className="text-4xl font-bold">
-          Button Components for Tailwind
-        </span>
-        <span className="text-gray-600">
-          Responsive buttons built with Tailwind CSS. Buttons provide predefined
-          styles for multiple button types: outline, rounded, social, floating,
-          fixed, and more.
-        </span>
-      </div>
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [module]);
 
-      {elements.map((variant) => {
-        return (
-          <div>
-            <div className="flex flex-col border-b gap-4 border-gray-200 pb-4">
-              <span className="text-2xl font-semibold">{variant.title}</span>
-              <span>{variant.description}</span>
-            </div>
-            <div className="border border-gray-200 h-max">
-              <div className="p-7">{variant.src}</div>
-              <div className="flex justify-center border-t border-gray-200 p-7">
-                <div>SHOW CODE</div>
+  return (
+    <>
+      <Header />
+      <div className="flex flex-col gap-3 h-screen py-12 px-24 text-left">
+        <div className="flex flex-col gap-3 border-b border-gray-200 py-6 mb-5">
+          <span className="text-4xl font-bold">{intro.title}</span>
+          <span className="text-gray-600">{intro.description}</span>
+        </div>
+
+        {elements.map((variant) => {
+          return (
+            <div>
+              <div className="flex flex-col border-b gap-4 border-gray-200 pb-4">
+                <span className="text-2xl font-semibold">{variant.title}</span>
+                <span>{variant.description}</span>
+              </div>
+              <div className="border border-gray-200 h-max">
+                <div className="p-7">{variant.src}</div>
+                <div className="flex justify-center border-t border-gray-200 p-7">
+                  <div>SHOW CODE</div>
+                </div>
               </div>
             </div>
-          </div>
-        );
-      })}
-      <Footer />
-    </div>
+          );
+        })}
+        <Footer />
+      </div>
+    </>
   );
 };
 
@@ -156,6 +165,11 @@ const buttons = [
     ),
   },
 ];
+const buttonIntro = {
+  title: " Button Components for Tailwind",
+  description:
+    " Responsive buttons built with Tailwind CSS. Buttons provide predefined styles for multiple button types: outline, rounded, social, floating,fixed, and more.",
+};
 
 const inputs = [
   {
@@ -236,3 +250,40 @@ const inputs = [
     ),
   },
 ];
+const inputIntro = {
+  title: "Tailwind Inputs component.",
+  description:
+    "Responsive inputs built with Tailwind CSS. Get data from the users in password inputs, text areas, email fields, and many more types of data. Free download",
+};
+
+const radioButtons = [
+  {
+    title: "Basic Examples",
+    description:
+      "Radio buttons are most commonly used when you have a group of mutually exclusive choices and only one choice from that group is allowed.",
+    src: <RadioButton />,
+  },
+  {
+    title: "Disabled",
+    description:
+      "Radio buttons are most commonly used when you have a group of mutually exclusive choices and only one choice from that group is allowed.",
+    src: <RadioButton disabled />,
+  },
+  {
+    title: "Inline ",
+    description:
+      "Group radios in the same horizontal row by adding .form-check-inline to any .form-check",
+    src: <RadioButton inline />,
+  },
+  {
+    title: "Default Checked ",
+    description:
+      "Make any radio button default checked by passing checked as Props",
+    src: <RadioButton checked />,
+  },
+];
+const radioIntro = {
+  title: " Tailwind Radios component  ",
+  description:
+    "Responsive radios built with Tailwind CSS. Limits the user to one selection, from a list of preset options. Free for commercial use, no registration required.",
+};

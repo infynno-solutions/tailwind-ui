@@ -67,11 +67,8 @@ export default function Pricing() {
           {/* middle portion with hover effect */}
           <div
             className={`
-              "w-[360px] md:w-[384px] h-[572px] p-6 bg-white group rounded-[20px] ease-in duration-300 border-[#0B0641] border xl:border-none "
-              ${
-                icon === "2" &&
-                "text-white bg-[#0B0641] lg:-translate-y-6 w-[360px] md:w-[384px] h-[572px] "
-              }
+              " w-[360px] md:w-[384px] h-[572px] p-6 bg-white group rounded-[20px] ease-in duration-300 border-[#0B0641] border xl:border-none "
+              ${icon === "2" && "text-white bg-[#0B0641] lg:-translate-y-6 "}
           `}
             onMouseOver={() => setIcon("2")}
             onMouseOut={() => setIcon("")}
@@ -103,8 +100,10 @@ export default function Pricing() {
                   <span className="">/month</span>
                 </div>
                 <button
-                  className={`"px-4 py-3 bg-[#FFF5FA] text-[#FF1D89]  rounded-xl mt-6 " ${
-                    icon === "2" && "text-[#ffffff] bg-[#FF1D89] "
+                  className={`"px-4 py-3 rounded-xl mt-6 " ${
+                    icon === "2"
+                      ? "text-[#ffffff] bg-[#FF1D89]"
+                      : "bg-[#FFF5FA] text-[#FF1D89]"
                   } w-full font-semibold text-[22px]`}
                 >
                   Choose
