@@ -26,3 +26,44 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.sample1 {
+  animation: sample1 0.8s linear;
+}
+
+@keyframes sample1 {
+  0% {
+    transform: scale(0.5) rotateY(180deg);
+    opacity: 30;
+  }
+  100% {
+    transform: scale(1) rotateY(0deg);
+    opacity: 100;
+  }
+}
+
+.sample2 {
+  animation: sample2 0.4s linear;
+}
+
+@keyframes sample2 {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sample3 {
+  animation: sample3 0.8s linear;
+}
+
+@keyframes sample3 {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
