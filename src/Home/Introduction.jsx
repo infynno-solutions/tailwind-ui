@@ -10,7 +10,10 @@ const Introduction = () => {
           <div className="text-5xl font-bold">
             Beautiful UI components, crafted with Tailwind CSS.
           </div>
-          <div className="text-blue-900 font-semibold mt-5 text-right cursor-pointer">
+          <div
+            className="text-blue-900 font-semibold mt-5 text-right cursor-pointer"
+            onClick={() => (window.location.href = "https://infynno.com/")}
+          >
             By the Infynno Solutions
           </div>
         </div>

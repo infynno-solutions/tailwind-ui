@@ -17,19 +17,19 @@ const PreviewTemplate = () => {
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample1`,
+      path: `${module}/sample1`,
       name: `${moduleName} Sample 1`,
     },
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample2`,
+      path: `${module}/sample2`,
       name: `${moduleName} Sample 2`,
     },
     {
       view: "preview",
       width: "100%",
-      path: `/${module}/sample3`,
+      path: `${module}/sample3`,
       name: `${moduleName} Sample 3`,
     },
   ]);
