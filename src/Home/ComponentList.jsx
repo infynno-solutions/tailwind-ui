@@ -19,8 +19,11 @@ const ComponentList = ({ components }) => {
                   <div className="w-[430px] h-[280px] bg-blue-100 rounded-lg"></div>
                 )}
                 <span className=" font-medium text-base">{comp.name}</span>
+
                 <span className="text-sm text-gray-600">
-                  {comp.components} components
+                  {comp.components
+                    ? `${comp.components} components`
+                    : "Form Elements"}
                 </span>
               </div>
             </Link>

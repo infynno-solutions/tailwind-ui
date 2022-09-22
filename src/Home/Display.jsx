@@ -2,6 +2,9 @@
 import React from "react";
 import pricingBg from "../assets/pricing-bg.png";
 import creditCardBg from "../assets/cc_bg.png";
+import buttonBg from "../assets/btn-bg.png";
+import inputBg from "../assets/input-bg.png";
+import radioBg from "../assets/radioBg.png";
 import Footer from "./Footer";
 import Header from "./Header";
 import ComponentList from "./ComponentList";
@@ -9,16 +12,27 @@ import Introduction from "./Introduction";
 
 const Display = () => {
   const elements = [
-    { name: "Buttons", components: 9 },
-    { name: "Dropdowns", components: 5 },
-    { name: "Checkboxes", components: 6 },
-    { name: "Date/Time", components: 7 },
+    {
+      name: "Buttons",
+      path: "/form-preview/buttons",
+      background: buttonBg,
+    },
+    {
+      name: "Inputs",
+      path: "/form-preview/inputs",
+      background: inputBg,
+    },
+    {
+      name: "Radio Buttons",
+      path: "/form-preview/radio",
+      background: radioBg,
+    },
   ];
 
   const applicationUi = [
     {
       name: "Pricing Layouts",
-      components: 5,
+      components: 3,
       path: "/preview/pricing",
       background: pricingBg,
     },
@@ -28,19 +42,9 @@ const Display = () => {
       path: "/preview/credit-card",
       background: creditCardBg,
     },
-    {
-      name: "Others",
-      components: 9,
-      path: "/undefined",
-    },
-    {
-      name: "Others",
-      components: 9,
-      path: "/undefined",
-    },
   ];
   return (
-    <div className=" w-full ">
+    <div className=" w-full bg-slate-100">
       <Header />
       <Introduction />
       <div
