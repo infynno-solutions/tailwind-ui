@@ -10,6 +10,13 @@ import Pricing3 from "./pricing/sample3/Pricing";
 import Pricing4 from "./pricing/sample4/Pricing";
 import PreviewTemplate from "./preview-template/PreviewTemplate";
 import Undefined from "./pages/undefined";
+import Button from "./Form/Button";
+import Input from "./Form/Input";
+import DatePicker from "./Form/DatePicker";
+import RadioButton from "./Form/RadioButton";
+import Switch from "./Form/Switch";
+import Select from "./Form/Select";
+import FormPreview from "./preview-template/FormPreview";
 
 function App() {
   return (
@@ -24,6 +31,13 @@ function App() {
         <Route path="/pricing/sample3" element={<Pricing3 />} />
         <Route path="/pricing/sample4" element={<Pricing4 />} />
         <Route path="/preview/:module" element={<PreviewTemplate />} />
+        <Route path="/form-preview/:module" element={<FormPreview />} />
+        <Route path="/buttons" element={<Button />} />
+        <Route path="/inputs" element={<Input />} />
+        <Route path="/date-picker" element={<DatePicker />} />
+        <Route path="/radio-button" element={<RadioButton />} />
+        <Route path="/switch" element={<Switch />} />
+        <Route path="/select" element={<Select />} />
         <Route path="/undefined" element={<Undefined />} />
       </Routes>
     </div>

@@ -2,6 +2,8 @@
 import React from "react";
 import pricingBg from "../assets/pricing-bg.png";
 import creditCardBg from "../assets/cc_bg.png";
+import buttonBg from "../assets/btn-bg.png";
+import inputBg from "../assets/input-bg.png";
 import Footer from "./Footer";
 import Header from "./Header";
 import ComponentList from "./ComponentList";
@@ -9,8 +11,18 @@ import Introduction from "./Introduction";
 
 const Display = () => {
   const elements = [
-    { name: "Buttons", components: 9 },
-    { name: "Dropdowns", components: 5 },
+    {
+      name: "Buttons",
+      components: 9,
+      path: "/form-preview/buttons",
+      background: buttonBg,
+    },
+    {
+      name: "Inputs",
+      components: 5,
+      path: "/form-preview/inputs",
+      background: inputBg,
+    },
     { name: "Checkboxes", components: 6 },
     { name: "Date/Time", components: 7 },
   ];
