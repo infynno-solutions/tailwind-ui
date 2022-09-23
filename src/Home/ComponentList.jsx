@@ -12,15 +12,18 @@ const ComponentList = ({ components }) => {
                 {comp.background ? (
                   <img
                     src={comp?.background}
-                    className="w-[430px] h-[280px] bg-blue-100 rounded-lg opacity-75 hover:opacity-100 duration-100"
+                    className="w-[430px] h-[280px] bg-blue-100 rounded-lg opacity-75 hover:opacity-100 duration-100 border border-gray-200"
                     alt="component name"
                   />
                 ) : (
                   <div className="w-[430px] h-[280px] bg-blue-100 rounded-lg"></div>
                 )}
                 <span className=" font-medium text-base">{comp.name}</span>
+
                 <span className="text-sm text-gray-600">
-                  {comp.components} components
+                  {comp.components
+                    ? `${comp.components} components`
+                    : "Form Elements"}
                 </span>
               </div>
             </Link>
