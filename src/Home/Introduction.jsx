@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5, FaReact, FaVuejs } from "react-icons/fa";
+import { FaHtml5, FaReact } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
 const Introduction = () => {
@@ -22,8 +22,6 @@ const Introduction = () => {
           <span className="mr-5">HTML</span>
           <FaReact />
           <span className="mr-3">React</span>
-          <FaVuejs />
-          <span className="mr-3">Vue</span>
         </div>
         <div className="">
           <p>
