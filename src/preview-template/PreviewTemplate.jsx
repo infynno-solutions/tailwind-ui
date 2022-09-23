@@ -9,30 +9,12 @@ import { BiLinkExternal } from "react-icons/bi";
 import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "../Home/Header";
+import { applicationUiData } from "../helper/applicationUI";
 
 const PreviewTemplate = () => {
   const { module } = useParams();
   const moduleName = module.charAt(0).toUpperCase() + module.slice(1);
-  const [moduleData, setModuleData] = useState([
-    {
-      view: "preview",
-      width: "100%",
-      path: `${module}/sample1`,
-      name: `${moduleName} Sample 1`,
-    },
-    {
-      view: "preview",
-      width: "100%",
-      path: `${module}/sample2`,
-      name: `${moduleName} Sample 2`,
-    },
-    {
-      view: "preview",
-      width: "100%",
-      path: `${module}/sample3`,
-      name: `${moduleName} Sample 3`,
-    },
-  ]);
+  const [moduleData, setModuleData] = useState([]);
 
   const changeWidth = (index, width) => {
     const d = [...moduleData];
@@ -48,6 +30,19 @@ const PreviewTemplate = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, [module]);
+
+  useEffect(() => {
+    switch (module) {
+      case "pricing":
+        setModuleData(applicationUiData.pricing.data);
+        break;
+      case "credit-card":
+        setModuleData(applicationUiData.creditCard.data);
+        break;
+      default:
+        return null;
+    }
   }, [module]);
 
   return (
@@ -118,7 +113,7 @@ const PreviewTemplate = () => {
                       className="cursor-pointer text-gray-500 text-sm ml-4"
                       onClick={() =>
                         window.open(
-                          `http://localhost:3000${data.path}`,
+                          `${process.env.REACT_APP_URL}/${data.path}`,
                           "_blank"
                         )
                       }
@@ -132,7 +127,7 @@ const PreviewTemplate = () => {
                     title="Preview"
                     width={data.width}
                     className="h-[80vh] bg-white"
-                    src={`http://localhost:3000${data.path}`}
+                    src={`${process.env.REACT_APP_URL}/${data.path}`}
                   ></iframe>
                 </div>
               ) : (
