@@ -40,6 +40,9 @@ const PreviewTemplate = () => {
       case "credit-card":
         setModuleData(applicationUiData.creditCard.data);
         break;
+      case "carousel":
+        setModuleData(applicationUiData.carousel.data);
+        break;
       default:
         return null;
     }

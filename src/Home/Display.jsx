@@ -5,6 +5,7 @@ import creditCardBg from "../assets/cc_bg.png";
 import buttonBg from "../assets/btn-bg.png";
 import inputBg from "../assets/input-bg.png";
 import radioBg from "../assets/radioBg.png";
+import carouselbg from "../assets/bg-carousel.png";
 import Footer from "./Footer";
 import Header from "./Header";
 import ComponentList from "./ComponentList";
@@ -42,6 +43,12 @@ const Display = () => {
       components: 3,
       path: "/preview/credit-card",
       background: creditCardBg,
+    },
+    {
+      name: "Carousel Layout",
+      components: 1,
+      path: "/preview/carousel",
+      background: carouselbg,
     },
   ];
   return (
