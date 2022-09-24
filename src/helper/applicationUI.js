@@ -59,4 +59,14 @@ export const applicationUiData = {
       },
     ],
   },
+  carousel: {
+    data: [
+      {
+        view: "preview",
+        width: "100%",
+        path: "carousel/sample1",
+        name: "Carousel Sample 1",
+      },
+    ],
+  },
 };
