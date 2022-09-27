@@ -17,7 +17,8 @@ import RadioButton from "./Form/RadioButton";
 import Switch from "./Form/Switch";
 import Select from "./Form/Select";
 import FormPreview from "./preview-template/FormPreview";
-import Carouasel1 from "./carousel/sample1/Carousel";
+import Carousel1 from "./carousel/sample1/Carousel";
+import Carousel2 from "./carousel/sample2/Carousel";
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
         <Route path="/switch" element={<Switch />} />
         <Route path="/select" element={<Select />} />
         <Route path="/undefined" element={<Undefined />} />
-        <Route path="/carousel/sample1" element={<Carouasel1 />} />
+        <Route path="/carousel/sample1" element={<Carousel1 />} />
+        <Route path="/carousel/sample2" element={<Carousel2 />} />
       </Routes>
     </div>
   );
