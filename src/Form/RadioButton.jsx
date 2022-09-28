@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 
 const RadioButton = ({
@@ -19,10 +20,12 @@ const RadioButton = ({
             id={labelvalue1}
             disabled={disabled}
           />
+
           <label
-            className={`form-check-label inline-block  ${
-              disabled ? "text-gray-400" : "text-gray-800"
-            }`}
+            className={classNames(
+              "form-check-label inline-block text-gray-800",
+              disabled && "text-gray-400 cursor-not-allowed"
+            )}
             for={labelvalue2}
           >
             Default radio
@@ -38,9 +41,10 @@ const RadioButton = ({
             checked
           />
           <label
-            className={`form-check-label inline-block  ${
-              disabled ? "text-gray-400" : "text-gray-800"
-            }`}
+            className={classNames(
+              "form-check-label inline-block text-gray-800",
+              disabled && "text-gray-400 cursor-not-allowed"
+            )}
             for={labelvalue2}
           >
             Default checked radio
