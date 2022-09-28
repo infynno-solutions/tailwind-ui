@@ -55,7 +55,7 @@ const Display = () => {
         <div className="flex flex-col md:gap-5 gap-3 text-left mb-10 ">
           <span className="text-xl font-semibold">Application UI</span>
           <span className="text-gray-600">
-            Pricing, Modals and Credit card components - everything you need to
+            Pricing Modals and Credit card components - everything you need to
             build beautiful responsive web applications.
           </span>
         </div>
