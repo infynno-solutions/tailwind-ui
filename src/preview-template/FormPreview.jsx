@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../Home/Footer";
 import { useParams } from "react-router-dom";
 import Header from "../Home/Header";
 import { formElementsData } from "../helper/formElements";
+import Codeblock from "./Codeblock";
 
 const FormPreview = () => {
   const { module } = useParams();
+  const [collapse, setCollapse] = useState(null);
   const { buttons, inputs, radioButtons } = formElementsData;
   let elements, intro;
   switch (module) {
@@ -39,7 +41,7 @@ const FormPreview = () => {
           <span className="text-gray-600">{intro.description}</span>
         </div>
 
-        {elements.map((variant) => {
+        {elements.map((variant, index) => {
           return (
             <div>
               <div className="flex flex-col border-b gap-4 border-gray-200 pb-4">
@@ -49,7 +51,24 @@ const FormPreview = () => {
               <div className="border border-gray-200 h-max">
                 <div className="p-7">{variant.src}</div>
                 <div className="flex justify-center border-t border-gray-200 p-7">
-                  <div className="text-blue-600">SHOW CODE</div>
+                  {collapse === index ? (
+                    <div
+                      className="text-blue-600 cursor-pointer"
+                      onClick={() => setCollapse(null)}
+                    >
+                      HIDE CODE
+                    </div>
+                  ) : (
+                    <div
+                      className="text-blue-600 cursor-pointer"
+                      onClick={() => setCollapse(index)}
+                    >
+                      SHOW CODE
+                    </div>
+                  )}
+                </div>
+                <div>
+                  {collapse === index && <Codeblock code={variant.code} />}
                 </div>
               </div>
             </div>

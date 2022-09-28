@@ -132,7 +132,7 @@ const PreviewTemplate = () => {
                 </div>
               ) : (
                 <div className=" h-max w-full">
-                  <Codeblock />
+                  <Codeblock code={data.code} />
                 </div>
               )}
             </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { FaHtml5, FaReact } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 
 const Introduction = () => {
   return (
@@ -10,35 +9,40 @@ const Introduction = () => {
           <div className="text-5xl font-bold">
             Beautiful UI components, crafted with Tailwind CSS.
           </div>
-          <div
-            className="text-blue-900 font-semibold mt-5 text-right cursor-pointer"
-            onClick={() => (window.location.href = "https://infynno.com/")}
-          >
-            By the Infynno Solutions
+          <div className="text-blue-900 font-semibold mt-5 text-center">
+            <a href="https://infynno.com/" target="_blank" rel="noreferrer">
+              By the Infynno Solutions
+            </a>
           </div>
         </div>
         <div className="flex justify-center items-center gap-1 w-full ">
           <FaHtml5 />
-          <span className="mr-5">HTML</span>
+          <span className="mr-5">
+            <a
+              href="https://infynno.com/service/web-development/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              HTML
+            </a>
+          </span>
           <FaReact />
-          <span className="mr-3">React</span>
+          <span className="mr-3">
+            <a
+              href="https://infynno.com/service/reactjs-development/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              React
+            </a>
+          </span>
         </div>
         <div className="">
           <p>
-            Over 200+ professionally designed, fully responsive, expertly
-            crafted component examples you can drop into your Tailwind projects
-            and customize to your heart’s content.
+            Examples of beautifully produced, completely responsive, and
+            professionally designed components that you can add to your Tailwind
+            projects and modify as you like.
           </p>
-        </div>
-        <div className="flex gap-5 justify-center w-full">
-          <button className="flex h-12 rounded-lg items-center px-4 gap-2 hover:shadow-md bg-blue-700 text-white">
-            Preview
-            <FiArrowRight />
-          </button>
-          <button className="flex h-12 rounded-lg bg-white items-center border border-blue-400 px-4 gap-2 hover:shadow-md">
-            Documentation
-            <FiArrowRight />
-          </button>
         </div>
       </div>
     </div>

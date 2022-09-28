@@ -1,12 +1,11 @@
-/* eslint-disable import/no-webpack-loader-syntax */
 import React from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
-const Codeblock = () => {
+const Codeblock = ({ code }) => {
   return (
     <div className="text-sm text-left">
       <CopyBlock
-        text={require("!!raw-loader!../pricing/sample3/Pricing.jsx").default.toString()}
+        text={code}
         language="jsx"
         showLineNumbers={false}
         theme={dracula}

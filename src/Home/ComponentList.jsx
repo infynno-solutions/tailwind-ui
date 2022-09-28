@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 
 const ComponentList = ({ components }) => {
   return (
-    <div className="flex md:flex-row flex-col border-t border-gray-200 py-14 text-left md:gap-0 gap-5 ">
+    <div className="flex md:flex-row flex-col border-t border-gray-200 py-14 text-left md:gap-0 gap-5">
       <div className="flex gap-4 flex-wrap">
         {components.map((comp) => {
           return (
             <Link to={`${comp?.path}`}>
-              <div className="flex flex-col gap-1 group hover:bg-teal-50 p-2 rounded-lg cursor-pointer">
+              <div
+                className="flex flex-col gap-1 group hover:bg-teal-50 p-2 rounded-lg cursor-pointer"
+                title={comp.name}
+              >
                 {comp.background ? (
                   <img
                     src={comp?.background}

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-webpack-loader-syntax */
+
 import Button from "../Form/Button";
 import Input from "../Form/Input";
 import RadioButton from "../Form/RadioButton";
@@ -10,6 +12,7 @@ export const formElementsData = {
         description:
           " Use these default button styles with multiple colors to indicate an  action or link within your website.",
         src: <Button />,
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Colors",
@@ -25,6 +28,7 @@ export const formElementsData = {
             <Button variant="dark" />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Outline",
@@ -40,6 +44,7 @@ export const formElementsData = {
             <Button variant="outline-dark" />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Rounded",
@@ -55,6 +60,7 @@ export const formElementsData = {
             <Button variant="dark" rounded />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Rounded",
@@ -70,6 +76,7 @@ export const formElementsData = {
             <Button variant="outline-dark" rounded />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Sizes",
@@ -82,6 +89,7 @@ export const formElementsData = {
             <Button lg />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Disabled",
@@ -93,6 +101,7 @@ export const formElementsData = {
             <Button variant="secondary" disabled />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
       {
         title: "Block buttons",
@@ -104,6 +113,7 @@ export const formElementsData = {
             <Button variant="outline-primary" block />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Button.jsx").default.toString(),
       },
     ],
     intro: {
@@ -120,6 +130,7 @@ export const formElementsData = {
         description:
           "Form components help you to define the type of widget that is required to enter data and automatically adds a property to the resource endpoint to interact with the form component.",
         src: <Input />,
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Sizing",
@@ -132,6 +143,7 @@ export const formElementsData = {
             <Input lg />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Disabled",
@@ -142,6 +154,7 @@ export const formElementsData = {
             <Input disabled />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Read only",
@@ -152,6 +165,7 @@ export const formElementsData = {
             <Input readOnly />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Text input",
@@ -162,6 +176,7 @@ export const formElementsData = {
             <Input />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Email",
@@ -172,6 +187,7 @@ export const formElementsData = {
             <Input type="email" />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Password",
@@ -182,6 +198,7 @@ export const formElementsData = {
             <Input type="email" />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
       {
         title: "Numbers",
@@ -191,6 +208,7 @@ export const formElementsData = {
             <Input type="number" />
           </div>
         ),
+        code: require("!!raw-loader!../Form/Input.jsx").default.toString(),
       },
     ],
     intro: {
@@ -206,25 +224,56 @@ export const formElementsData = {
         title: "Basic Examples",
         description:
           "Radio buttons are most commonly used when you have a group of mutually exclusive choices and only one choice from that group is allowed.",
-        src: <RadioButton />,
+        src: (
+          <RadioButton
+            labelvalue1="mydata7"
+            labelvalue2="mydata8"
+            labelvalue3="radio1"
+          />
+        ),
+        code: require("!!raw-loader!../Form/RadioButton.jsx").default.toString(),
       },
       {
         title: "Disabled",
         description:
           "Radio buttons are most commonly used when you have a group of mutually exclusive choices and only one choice from that group is allowed.",
-        src: <RadioButton disabled />,
+        src: (
+          <RadioButton
+            disabled
+            labelvalue1="mydata1"
+            labelvalue2="mydata2"
+            labelvalue3="radio2"
+          />
+        ),
+        code: require("!!raw-loader!../Form/RadioButton.jsx").default.toString(),
       },
       {
         title: "Inline ",
         description:
           "Group radios in the same horizontal row by adding .form-check-inline to any .form-check",
-        src: <RadioButton inline />,
+        src: (
+          <RadioButton
+            inline
+            labelvalue1="mydata3"
+            labelvalue2="mydata4"
+            labelvalue3="radio3"
+          />
+        ),
+        code: require("!!raw-loader!../Form/RadioButton.jsx").default.toString(),
       },
       {
         title: "Default Checked ",
         description:
           "Make any radio button default checked by passing checked as Props",
-        src: <RadioButton checked />,
+        src: (
+          <RadioButton
+            checked
+            labelvalue1="mydata5"
+            labelvalue2="mydata6"
+            labelvalue3="radio4"
+          />
+        ),
+        code: require("!!raw-loader!../Form/RadioButton.jsx").default.toString(),
       },
     ],
     intro: {
