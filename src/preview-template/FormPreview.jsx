@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from "react";
 import Footer from "../Home/Footer";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import Header from "../Home/Header";
 import { formElementsData } from "../helper/formElements";
 import Codeblock from "./Codeblock";
 
 const FormPreview = () => {
   const { module } = useParams();
+  const moduleName = module.charAt(0).toUpperCase() + module.slice(1);
   const [collapse, setCollapse] = useState(null);
+  const location = useLocation();
+  const value = location.pathname;
+  const scrollView = value.split("/")[1];
+
   const { buttons, inputs, radioButtons } = formElementsData;
   let elements, intro;
   switch (module) {
@@ -34,9 +39,12 @@ const FormPreview = () => {
 
   return (
     <>
-      <Header />
-      <div className="flex flex-col gap-3 h-screen py-12 px-24 text-left">
+      <Header module={scrollView} />
+      <div className="flex flex-col gap-3 h-screen  px-24 text-left">
         <div className="flex flex-col gap-3 border-b border-gray-200 py-6 mb-5">
+          <span className="text-xs font-extrabold text-gray-400  cursor-pointer">
+            <Link to="/">Form Elements </Link>/ {moduleName}
+          </span>
           <span className="text-4xl font-bold">{intro.title}</span>
           <span className="text-gray-600">{intro.description}</span>
         </div>

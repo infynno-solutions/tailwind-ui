@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/Logo.svg";
-
-const Header = () => {
+import { Link } from "react-router-dom";
+const Header = ({ module }) => {
   return (
     <div className="flex justify-between items-center font-semibold h-[90px] md:px-28 sm:px-12 px-6 py-8 bg-white border-b border-gray-200">
       <a href="/">
@@ -10,7 +10,7 @@ const Header = () => {
       <div className="flex items-center">
         <span className="mr-10 cursor-pointer hover:text-blue-700 sm:flex hidden">
           <a
-            href="https://github.com/infynno-solutions"
+            href="https://github.com/infynno-solutions/tailwind-ui"
             target="_blank"
             rel="noreferrer"
           >
@@ -21,7 +21,9 @@ const Header = () => {
           className="mr-10 cursor-pointer hover:text-blue-600 sm:flex hidden"
           onClick={() => document.getElementById("components").scrollIntoView()}
         >
-          Components
+          <Link to={module ? `/?tailwind=${module}` : "?tailwind=home"}>
+            Components
+          </Link>
         </span>
       </div>
     </div>

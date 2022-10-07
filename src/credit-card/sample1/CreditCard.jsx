@@ -25,7 +25,7 @@ const CreditCard = ({ showCaseView }) => {
       }`}
     >
       <div
-        className={`flex flex-col justify-center items-center md:gap-20 sm:gap-16 bg-black bg-opacity-60 gap-7 shadow-sm rounded-3xl w-max px-16 md:px-14 lg:px-20 sm:py-20 py-8 ${
+        className={`flex flex-col justify-center items-center md:gap-20 sm:gap-16 bg-black bg-opacity-60 gap-7 shadow-sm rounded-3xl w-max px-6 md:px-8 lg:px-20 sm:py-20 py-8 ${
           showCaseView && "sm:py-20 md:py-7 py-6"
         }`}
       >
@@ -38,7 +38,7 @@ const CreditCard = ({ showCaseView }) => {
                   : "Please enter valid card number"}
               </div>
             )}
-            <div className="flex flex-col justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[186px] w-[277px] rounded-[10px] px-[26px] py-[18px] transition duration-400  shadow-xl hover:scale-110 sample1">
+            <div className="flex flex-col justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-[186px] w-[307px] rounded-[10px] px-[26px] py-[18px] transition duration-400  shadow-xl hover:scale-110 sample1">
               <div className="flex justify-between leading-[14px] items-center">
                 <span className="text-[13px] font-medium">Credit Card</span>
                 <img
@@ -119,7 +119,7 @@ const CreditCard = ({ showCaseView }) => {
                 Please enter valid cvv number
               </span>
             )}
-            <div className="flex flex-col justify-between bg-white h-[186px] w-[277px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-xl transition duration-400 hover:scale-110 sample1">
+            <div className="flex flex-col justify-between bg-white h-[186px] w-[307px] rounded-[10px] pt-[18px] pb-2 italic text-[4px] shadow-xl transition duration-400 hover:scale-110 sample1">
               <div>
                 <div className="bg-black h-[34px] w-full" />
                 <div className="flex justify-between">
