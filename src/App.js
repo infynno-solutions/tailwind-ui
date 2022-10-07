@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:module" element={<Home />} />
         <Route path="/credit-card/sample1" element={<Sample1 />} />
         <Route path="/credit-card/sample2" element={<Sample2 />} />
         <Route path="/credit-card/sample3" element={<Sample3 />} />
@@ -30,8 +31,8 @@ function App() {
         <Route path="/pricing/sample2" element={<Pricing2 />} />
         <Route path="/pricing/sample3" element={<Pricing3 />} />
         <Route path="/pricing/sample4" element={<Pricing4 />} />
-        <Route path="/preview/:module" element={<PreviewTemplate />} />
-        <Route path="/form-preview/:module" element={<FormPreview />} />
+        <Route path="/application-ui/:module" element={<PreviewTemplate />} />
+        <Route path="/form-elements/:module" element={<FormPreview />} />
         <Route path="/buttons" element={<Button />} />
         <Route path="/inputs" element={<Input />} />
         <Route path="/date-picker" element={<DatePicker />} />

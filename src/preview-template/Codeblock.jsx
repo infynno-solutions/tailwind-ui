@@ -7,8 +7,9 @@ const Codeblock = ({ code }) => {
       <CopyBlock
         text={code}
         language="jsx"
-        showLineNumbers={false}
+        showLineNumbers={true}
         theme={dracula}
+        Codeblock
       />
     </div>
   );
