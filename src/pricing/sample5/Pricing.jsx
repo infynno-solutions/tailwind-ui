@@ -236,7 +236,7 @@ export default function Pricing() {
                       <div className="font-semibold text-xl text-[#101828]">
                         {nestedData.mainTitle}
                         {nestedData.popular && (
-                          <span className="text-sm font-medium text-[#6941C6] px-2.5 py-0.5 bg-[#F9F5FF] rounded-2xl ml-2">
+                          <span className="text-sm font-medium text-[#60a5fa] px-2.5 py-0.5 bg-[#F9F5FF] rounded-2xl ml-2">
                             Popular
                           </span>
                         )}
@@ -272,17 +272,17 @@ export default function Pricing() {
                 <tr>
                   <td></td>
                   <td>
-                    <button className="w-full bg-[#7F56D9] text-white rounded-lg py-3 font-semibold">
+                    <button className="w-full bg-[#60a5fa] text-white rounded-lg py-3 font-semibold">
                       Get Started
                     </button>
                   </td>
                   <td>
-                    <button className="w-full bg-[#7F56D9] text-white rounded-lg py-3 font-semibold">
+                    <button className="w-full bg-[#60a5fa] text-white rounded-lg py-3 font-semibold">
                       Get Started
                     </button>
                   </td>
                   <td>
-                    <button className="w-full bg-[#7F56D9] text-white rounded-lg py-3 font-semibold">
+                    <button className="w-full bg-[#60a5fa] text-white rounded-lg py-3 font-semibold">
                       Get Started
                     </button>
                   </td>
@@ -291,7 +291,7 @@ export default function Pricing() {
                 <tr>
                   {data.priceInfo.map((nestedData) => (
                     <td>
-                      <span className="text-sm font-semibold text-[#6941C6]">
+                      <span className="text-sm font-semibold text-[#60a5fa]">
                         {nestedData.titlerow1}
                       </span>
                     </td>
@@ -350,7 +350,7 @@ export default function Pricing() {
                 <tr>
                   {data.priceInfo.map((nestedData) => (
                     <td>
-                      <span className="text-sm font-semibold text-[#6941C6] whitespace-nowrap">
+                      <span className="text-sm font-semibold text-[#60a5fa] whitespace-nowrap">
                         {nestedData.titlerow5}
                       </span>
                     </td>
@@ -407,7 +407,7 @@ export default function Pricing() {
                         <div className="font-semibold text-xl text-[#101828]">
                           {data.headTitle}
                           {data.ispopular && (
-                            <span className="text-sm font-medium text-[#6941C6] px-2.5 py-0.5 bg-[#F9F5FF] rounded-2xl ml-2">
+                            <span className="text-sm font-medium text-[#60a5fa] px-2.5 py-0.5 bg-[#F9F5FF] rounded-2xl ml-2">
                               Popular
                             </span>
                           )}
@@ -435,14 +435,14 @@ export default function Pricing() {
                     </tr>
                     <tr>
                       <td colSpan={2}>
-                        <button className="w-full bg-[#7F56D9] text-white rounded-lg py-3 font-semibold">
+                        <button className="w-full bg-[#60a5fa] text-white rounded-lg py-3 font-semibold">
                           Get Started
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td colSpan={2}>
-                        <span className="text-sm font-semibold text-[#6941C6]">
+                        <span className="text-sm font-semibold text-[#60a5fa]">
                           Overview
                         </span>
                       </td>
@@ -471,7 +471,7 @@ export default function Pricing() {
                     ))}
                     <tr>
                       <td colSpan={2}>
-                        <span className="text-sm font-semibold text-[#6941C6]">
+                        <span className="text-sm font-semibold text-[#60a5fa]">
                           Reporting and analytics
                         </span>
                       </td>
