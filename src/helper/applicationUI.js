@@ -31,6 +31,13 @@ export const applicationUiData = {
         name: "Pricing Sample 4",
         code: require("!!raw-loader!../pricing/sample4/Pricing.jsx").default.toString(),
       },
+      {
+        view: "preview",
+        width: "100%",
+        path: "pricing/sample5",
+        name: "Pricing Sample 5",
+        code: require("!!raw-loader!../pricing/sample5/Pricing.jsx").default.toString(),
+      },
     ],
   },
 

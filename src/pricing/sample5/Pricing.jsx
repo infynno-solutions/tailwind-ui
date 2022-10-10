@@ -350,7 +350,7 @@ export default function Pricing() {
                 <tr>
                   {data.priceInfo.map((nestedData) => (
                     <td>
-                      <span className="text-sm font-semibold text-[#6941C6]">
+                      <span className="text-sm font-semibold text-[#6941C6] whitespace-nowrap">
                         {nestedData.titlerow5}
                       </span>
                     </td>
@@ -499,8 +499,6 @@ export default function Pricing() {
                       </tr>
                     ))}
                   </table>
-                  {/* {console.log(Object.keys(data.newArr))}
-                  {console.log(Object.values(data.newArr))} */}
                 </div>
               ))}
             </div>

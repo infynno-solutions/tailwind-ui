@@ -19,7 +19,7 @@ import Select from "./Form/Select";
 import FormPreview from "./preview-template/FormPreview";
 import Carousel1 from "./carousel/sample1/Carousel";
 import Carousel2 from "./carousel/sample2/Carousel";
-import Pricing5 from "./pricing/sample5/pricing";
+import Pricing5 from "./pricing/sample5/Pricing";
 
 function App() {
   return (
