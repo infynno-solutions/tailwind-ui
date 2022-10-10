@@ -68,7 +68,7 @@ export default function Carousel() {
             })}
           </div>
 
-          {/* cudtome dot portion */}
+          {/* custom dot portion */}
           <div className="absolute bottom-2 inset-x-0 flex flex-row gap-2 justify-center">
             {images.map((a, index) =>
               currentIndex === index ? (
