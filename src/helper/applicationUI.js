@@ -59,4 +59,22 @@ export const applicationUiData = {
       },
     ],
   },
+  carousel: {
+    data: [
+      {
+        view: "preview",
+        width: "100%",
+        path: "carousel/sample1",
+        name: "Carousel Sample 1",
+        code: require("!!raw-loader!../carousel/sample1/Carousel.jsx").default.toString(),
+      },
+      {
+        view: "preview",
+        width: "100%",
+        path: "carousel/sample2",
+        name: "Carousel Sample 2",
+        code: require("!!raw-loader!../carousel/sample2/Carousel.jsx").default.toString(),
+      },
+    ],
+  },
 };
