@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import pricingBg from "./assets/pricing-bg.png";
 import creditCardBg from "./assets/cc_bg.png";
+import carouselBg from "./assets/bg-carousel.png";
 import buttonBg from "./assets/btn-bg.png";
 import inputBg from "./assets/input-bg.png";
 import radioBg from "./assets/radioBg.png";
@@ -46,6 +47,12 @@ const Home = () => {
       components: 3,
       path: "/application-ui/credit-card",
       background: creditCardBg,
+    },
+    {
+      name: "Carousel",
+      components: 2,
+      path: "/application-ui/carousel",
+      background: carouselBg,
     },
   ];
   useEffect(() => {

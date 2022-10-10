@@ -28,7 +28,7 @@ export default function Carousel() {
       <div className="h-screen w-full flex justify-center items-center">
         <div className="w-[800px] relative">
           <div
-            className="absolute inset-y-0 left-3 w-5 flex "
+            className="absolute inset-y-0 left-3 w-5 flex z-50"
             onClick={decreseIndex}
           >
             <img src={leftIcon} alt="not found" className="cursor-pointer" />
