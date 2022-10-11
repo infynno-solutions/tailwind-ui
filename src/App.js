@@ -19,6 +19,7 @@ import Select from "./Form/Select";
 import FormPreview from "./preview-template/FormPreview";
 import Carousel1 from "./carousel/sample1/Carousel";
 import Carousel2 from "./carousel/sample2/Carousel";
+import Pricing5 from "./pricing/sample5/Pricing";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/undefined" element={<Undefined />} />
         <Route path="/carousel/sample1" element={<Carousel1 />} />
         <Route path="/carousel/sample2" element={<Carousel2 />} />
+        <Route path="/pricing/sample5" element={<Pricing5 />} />
       </Routes>
     </div>
   );
