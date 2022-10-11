@@ -1,63 +1,61 @@
 import React from "react";
 import successArrow from "./assets/correct.svg";
 import dashIcon from "./assets/Dash.svg";
+const pricingData = [
+  {
+    mainTitle: "",
+    price: "",
+    infoNote: "",
+    "Basic Feature": "Basic Feature",
+    Users: "Users",
+    "Individual data": "Individual data",
+    Support: "Support",
+    Analytics: "Analytics",
+    "Export Reports": "Export Reports",
+    titleRow1: "Overview",
+    titleRow5: "Reporting And Analytics",
+    "Api Access": "Api Access",
+  },
+  {
+    mainTitle: "Basic",
+    popular: true,
+    price: "$10",
+    infoNote: "Basic features for up to 10 employees with everything you need.",
+    "Basic Feature": true,
+    Users: 10,
+    "Individual data": "20GB",
+    Support: true,
+    Analytics: "Basic",
+    "Export Reports": true,
+    "Api Access": false,
+  },
+  {
+    mainTitle: "Business",
+    price: "$10",
+    infoNote:
+      "Advanced features and reporting, better workflows and automation.",
+    "Basic Feature": true,
+    Users: 20,
+    "Individual data": "40GB",
+    Support: true,
+    Analytics: "Advanced",
+    "Export Reports": true,
+    "Api Access": true,
+  },
+  {
+    mainTitle: "Enterprise",
+    price: "$10",
+    infoNote: "Personalised service and enterprise security for large teams.",
+    "Basic Feature": true,
+    Users: "Unlimited",
+    "Individual data": "Unlimited",
+    Support: true,
+    Analytics: "Advanced",
+    "Export Reports": true,
+    "Api Access": true,
+  },
+];
 export default function Pricing() {
-  const pricingData = [
-    {
-      mainTitle: "",
-      price: "",
-      infoNote: "",
-      "Basic Feature": "Basic Feature",
-      Users: "Users",
-      "Individual data": "Individual data",
-      Support: "Support",
-      Analytics: "Analytics",
-      "Export Reports": "Export Reports",
-      titleRow1: "Overview",
-      titleRow5: "Reporting And Analytics",
-      "Api Access": "Api Access",
-    },
-    {
-      mainTitle: "Basic",
-      popular: true,
-      price: "$10",
-      infoNote:
-        "Basic features for up to 10 employees with everything you need.",
-      "Basic Feature": true,
-      Users: 10,
-      "Individual data": "20GB",
-      Support: true,
-      Analytics: "Basic",
-      "Export Reports": true,
-      "Api Access": false,
-    },
-    {
-      mainTitle: "Business",
-      price: "$10",
-      infoNote:
-        "Advanced features and reporting, better workflows and automation.",
-      "Basic Feature": true,
-      Users: 20,
-      "Individual data": "40GB",
-      Support: true,
-      Analytics: "Advanced",
-      "Export Reports": true,
-      "Api Access": true,
-    },
-    {
-      mainTitle: "Enterprise",
-      price: "$10",
-      infoNote: "Personalised service and enterprise security for large teams.",
-      "Basic Feature": true,
-      Users: "Unlimited",
-      "Individual data": "Unlimited",
-      Support: true,
-      Analytics: "Advanced",
-      "Export Reports": true,
-      "Api Access": true,
-    },
-  ];
-
   return (
     <>
       <div>
