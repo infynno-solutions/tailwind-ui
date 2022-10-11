@@ -63,7 +63,7 @@ export default function Pricing() {
       <div>
         <div>
           <div className="py-8 lg:py-24 flex flex-col mx-4 px-4 lg:mx-0">
-            <span className="text-[#7F56D9] text-base">Pricing</span>
+            <span className="text-[#60a5fa] text-base">Pricing</span>
             <span className="font-semibold text-4xl sm:text-5xl mt-3 mb-6">
               Compare our plans and find yours
             </span>
