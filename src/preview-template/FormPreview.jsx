@@ -13,7 +13,7 @@ const FormPreview = () => {
   const value = location.pathname;
   const scrollView = value.split("/")[1];
 
-  const { buttons, inputs, radioButtons } = formElementsData;
+  const { buttons, inputs, radioButtons, checkbox } = formElementsData;
   let elements, intro;
   switch (module) {
     case "buttons":
@@ -27,6 +27,10 @@ const FormPreview = () => {
     case "radio":
       elements = radioButtons.data;
       intro = radioButtons.intro;
+      break;
+    case "checkbox":
+      elements = checkbox.data;
+      intro = checkbox.intro;
       break;
     default:
       elements = [];
