@@ -86,3 +86,10 @@ export default function Carousel() {
     </>
   );
 }
+
+// style.css
+
+// .temporary-bounce {
+//   -webkit-animation-iteration-count: 1;
+//   animation-iteration-count: 1;
+// }

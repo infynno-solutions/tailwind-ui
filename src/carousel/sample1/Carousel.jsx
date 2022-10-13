@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./style.css";
 import image1 from "./assets/img1.jpg";
 import image2 from "./assets/img2.jpg";
 import image3 from "./assets/img3.jpg";
@@ -40,7 +39,7 @@ export default function Carousel() {
                   <img
                     src={img}
                     alt="not found"
-                    className="temporary-bounce animate-pulse"
+                    className="object-cover w-full"
                   />
                 );
               } else return null;
