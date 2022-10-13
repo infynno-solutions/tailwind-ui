@@ -6,11 +6,11 @@ import image3 from "./assets/image3.jpg";
 import leftIcon from "./assets/left.svg";
 import rightIcon from "./assets/right.svg";
 
+const images = [image1, image2, image3];
+const text = ["lorem ipsum", "lorem ipsum dollar", "lorem ipsum dollar amet"];
+
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [image1, image2, image3];
-  const text = ["lorem ipsum", "lorem ipsum dollar", "lorem ipsum dollar amet"];
-
   const decreseIndex = () => {
     if (currentIndex <= 0) {
       setCurrentIndex(images.length - 1);

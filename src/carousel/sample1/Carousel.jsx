@@ -6,10 +6,9 @@ import image4 from "./assets/img4.jpg";
 import leftIcon from "./assets/left.svg";
 import rightIcon from "./assets/right.svg";
 
+const images = [image1, image2, image3, image4];
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [image1, image2, image3, image4];
-
   const decreseIndex = () => {
     if (currentIndex <= 0) {
       setCurrentIndex(0);
