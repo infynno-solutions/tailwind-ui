@@ -1,46 +1,45 @@
 import React from "react";
 import rightTick from "./assets/right-black.svg";
 
+const pricingData = [
+  {
+    mainTitle: "Basic plan",
+    subTitle: "Our most popular plan for small teams.",
+    price: 10,
+    ispopular: false,
+    getInPlan: [
+      "Access to basic features",
+      "Attend events",
+      "Basic reporting + analytics",
+      "Automatic updates",
+      "Up to 10 individual users",
+      "Backup your account",
+      "20GB individual data",
+      "Audit log and notes",
+      "Basic chat support",
+      "Feature requests",
+    ],
+  },
+  {
+    mainTitle: "Bussiness plan",
+    subTitle: "Advanced features and reporting.",
+    price: 20,
+    ispopular: true,
+    getInPlan: [
+      "Access to basic features",
+      "Attend events",
+      "Basic reporting + analytics",
+      "Automatic updates",
+      "Up to 10 individual users",
+      "Backup your account",
+      "20GB individual data",
+      "Audit log and notes",
+      "Basic chat support",
+      "Feature requests",
+    ],
+  },
+];
 export default function Pricing() {
-  const pricingData = [
-    {
-      mainTitle: "Basic plan",
-      subTitle: "Our most popular plan for small teams.",
-      price: 10,
-      ispopular: false,
-      getInPlan: [
-        "Access to basic features",
-        "Attend events",
-        "Basic reporting + analytics",
-        "Automatic updates",
-        "Up to 10 individual users",
-        "Backup your account",
-        "20GB individual data",
-        "Audit log and notes",
-        "Basic chat support",
-        "Feature requests",
-      ],
-    },
-    {
-      mainTitle: "Bussiness plan",
-      subTitle: "Advanced features and reporting.",
-      price: 20,
-      ispopular: true,
-      getInPlan: [
-        "Access to basic features",
-        "Attend events",
-        "Basic reporting + analytics",
-        "Automatic updates",
-        "Up to 10 individual users",
-        "Backup your account",
-        "20GB individual data",
-        "Audit log and notes",
-        "Basic chat support",
-        "Feature requests",
-      ],
-    },
-  ];
-
   return (
     <>
       {/* main div */}
