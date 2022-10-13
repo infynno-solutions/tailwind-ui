@@ -22,7 +22,7 @@ const staticValue = [
   },
   {
     passType: "Month Pass",
-    price: "$10",
+    price: "$20",
     image: blackSvg2,
     duration: "/day",
     static: [
