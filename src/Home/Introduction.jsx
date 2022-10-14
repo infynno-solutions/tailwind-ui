@@ -16,7 +16,7 @@ const Introduction = () => {
         <div className="flex flex-col justify-center gap-8 md:w-1/2 h-full ">
           <div>
             <div className="lg:leading-[60px] lg:text-5xl text-3xl font-bold text-white">
-              Beautiful UI components, crafted with Tailwind CSS.
+              UI elements that are beautifully made with Tailwind CSS
             </div>
             <div className="text-[#3b82f6] font-semibold mt-5 text-center">
               <a href="https:infynno.com/" target="_blank" rel="noreferrer">
