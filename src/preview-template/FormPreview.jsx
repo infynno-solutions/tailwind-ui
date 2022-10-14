@@ -44,7 +44,7 @@ const FormPreview = () => {
   return (
     <>
       <Header module={scrollView} />
-      <div className="flex flex-col gap-3 h-screen  px-24 text-left">
+      <div className="container mx-auto flex flex-col gap-3 h-screen text-left">
         <div className="flex flex-col gap-3 border-b border-gray-200 py-6 mb-5">
           <span className="text-xs font-extrabold text-gray-400  cursor-pointer">
             <Link to="/">Form Elements </Link>/ {moduleName}

@@ -32,15 +32,15 @@ const Home = () => {
       components: 8,
     },
     {
-      name: "Radio Buttons",
-      path: "/form-elements/radio",
-      background: radioBg,
-      components: 4,
-    },
-    {
       name: "Checkbox",
       path: "/form-elements/checkbox",
       background: checkBoxBg,
+      components: 4,
+    },
+    {
+      name: "Radio Buttons",
+      path: "/form-elements/radio",
+      background: radioBg,
       components: 4,
     },
   ];
@@ -75,7 +75,7 @@ const Home = () => {
       <Header />
       <Introduction />
       <div
-        className="container mx-auto border-t border-gray-200 md:px-16 px-10 py-10"
+        className="container mx-auto border-t border-gray-200 md:px-16 px-4 py-10"
         id="home"
       >
         <div

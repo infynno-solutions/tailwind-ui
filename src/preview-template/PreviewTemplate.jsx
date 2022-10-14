@@ -55,7 +55,7 @@ const PreviewTemplate = () => {
   return (
     <>
       <Header module={scrollView} />
-      <div className="h-max bg-slate-100 px-10">
+      <div className="h-max bg-slate-100 container mx-auto">
         <div className="flex flex-col text-3xl font-bold text-left px-5 py-7 border-b border-gray-200">
           <span className="text-xs text-gray-400 mb-2 cursor-pointer">
             <Link to="/">Application UI </Link>/ {moduleName}
