@@ -1,11 +1,12 @@
 /* eslint-disable no-lone-blocks */
 import React, { useEffect } from "react";
-import pricingBg from "./assets/pricing-bg.png";
-import creditCardBg from "./assets/cc_bg.png";
-import carouselBg from "./assets/bg-carousel.png";
-import buttonBg from "./assets/btn-bg.png";
-import inputBg from "./assets/input-bg.png";
-import radioBg from "./assets/radioBg.png";
+import pricingBg from "./assets/pricing-bg.jpg";
+import creditCardBg from "./assets/card-bg.png";
+import carouselBg from "./assets/carousel-bg.jpg";
+import buttonBg from "./assets/button-bg.jpg";
+import inputBg from "./assets/input-bg.jpg";
+import radioBg from "./assets/radio-bg.jpg";
+import checkBoxBg from "./assets/checkbox-bg.png";
 import Footer from "./Home/Footer";
 import Header from "./Home/Header";
 import ComponentList from "./Home/ComponentList";
@@ -22,16 +23,25 @@ const Home = () => {
       name: "Buttons",
       path: "/form-elements/buttons",
       background: buttonBg,
+      components: 8,
     },
     {
       name: "Inputs",
       path: "/form-elements/inputs",
       background: inputBg,
+      components: 8,
+    },
+    {
+      name: "Checkbox",
+      path: "/form-elements/checkbox",
+      background: checkBoxBg,
+      components: 4,
     },
     {
       name: "Radio Buttons",
       path: "/form-elements/radio",
       background: radioBg,
+      components: 4,
     },
   ];
 
@@ -61,11 +71,11 @@ const Home = () => {
     }
   }, [scrollView]);
   return (
-    <div className=" w-full bg-slate-100">
+    <div className=" w-full bg-white">
       <Header />
       <Introduction />
       <div
-        className="bg-white border-t border-gray-200 md:px-16 px-10 py-10"
+        className="container mx-auto border-t border-gray-200 md:px-16 px-4 py-10"
         id="home"
       >
         <div
@@ -91,7 +101,6 @@ const Home = () => {
         </div>
         <ComponentList components={elements} />
       </div>
-
       <Footer />
     </div>
   );

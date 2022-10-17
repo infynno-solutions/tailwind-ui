@@ -20,6 +20,7 @@ import FormPreview from "./preview-template/FormPreview";
 import Carousel1 from "./carousel/sample1/Carousel";
 import Carousel2 from "./carousel/sample2/Carousel";
 import Pricing5 from "./pricing/sample5/Pricing";
+import CheckBox from "./Form/CheckBox";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/form-elements/:module" element={<FormPreview />} />
         <Route path="/buttons" element={<Button />} />
         <Route path="/inputs" element={<Input />} />
+        <Route path="/checkbox" element={<CheckBox />} />
         <Route path="/date-picker" element={<DatePicker />} />
         <Route path="/radio-button" element={<RadioButton />} />
         <Route path="/switch" element={<Switch />} />

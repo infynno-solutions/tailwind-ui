@@ -1,6 +1,7 @@
 /* eslint-disable import/no-webpack-loader-syntax */
 
 import Button from "../Form/Button";
+import CheckBox from "../Form/CheckBox";
 import Input from "../Form/Input";
 import RadioButton from "../Form/RadioButton";
 
@@ -42,23 +43,27 @@ export const formElementsData = {
         ),
         code: `
       <div class="flex justify-center gap-3">
+      // blue fill button
         <div class="flex items-center justify-center">
           <button class="flex h-9 items-center justify-center rounded bg-blue-600 hover:bg-blue-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //green fill button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded bg-green-600 hover:bg-green-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-              
+          //gray fill button  
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded bg-gray-600 hover:bg-gray-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-              
+           //red fill button   
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded bg-red-600 hover:bg-red-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //yellow fill button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded bg-yellow-600 hover:bg-yellow-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //black fill button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center hover:bg-white hover:text-black hover:border-2 hover:border-[black] rounded bg-black px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
@@ -80,23 +85,27 @@ export const formElementsData = {
         ),
         code: `
         <div class="flex justify-center gap-3">
+        //blue outline button
         <div class="flex items-center justify-center">
           <button class="flex h-9 items-center justify-center rounded border-2 border-blue-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-blue-600 hover:bg-gray-100 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //green outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded border-2 border-green-600 bg-white px-6 text-xs font-medium uppercase leading-tight hover:bg-gray-100 text-green-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-            
+        //gray outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded border-2 border-gray-600 bg-white px-6 text-xs font-medium uppercase leading-tight hover:bg-gray-100 text-gray-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-            
+        //red outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded border-2 border-red-600 bg-white px-6 text-xs font-medium uppercase leading-tight hover:bg-gray-100 text-red-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //yellow outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded border-2 border-yellow-600 bg-white px-6 text-xs font-medium uppercase leading-tight v text-yellow-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //black outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded border-2 border-black bg-white px-6 text-xs font-medium uppercase leading-tight hover:bg-gray-100 text-black shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
@@ -120,23 +129,27 @@ export const formElementsData = {
         ),
         code: `
         <div class="flex justify-center gap-3">
+        //blue rounded fill button
           <div class="flex items-center justify-center">
              <button class="flex h-9 items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
+           //green rounded fill button
            <div class="flex items-center justify-center">
              <button class="success && flex h-9 items-center justify-center rounded-full border-2 bg-green-600 hover:bg-green-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
-
+           //gray rounded fill button
            <div class="flex items-center justify-center">
              <button class="success && flex h-9 items-center justify-center rounded-full border-2 bg-gray-600 hover:bg-gray-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
-
+           //red rounded fill button
            <div class="flex items-center justify-center">
              <button class="success && flex h-9 items-center justify-center rounded-full border-2 bg-red-600 hover:bg-red-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
+           //yellow rounded fill button
            <div class="flex items-center justify-center">
              <button class="success && flex h-9 items-center justify-center rounded-full border-2 bg-yellow-600 hover:bg-yellow-700 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
+           //black rounded fill button
            <div class="flex items-center justify-center">
              <button class="success && flex h-9 items-center justify-center rounded-full border-2 bg-black px-6 text-xs hover:bg-white hover:text-black hover:border-2 hover:border-[black] font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
            </div>
@@ -161,23 +174,27 @@ export const formElementsData = {
         ),
         code: `
         <div class="flex justify-center gap-3">
+        //blue rounded outline button
         <div class="flex items-center justify-center">
           <button class="flex h-9 items-center justify-center rounded-full border-2 border-blue-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-blue-600 hover:bg-gray-100 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //green rounded outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded-full border-2 border-green-600 bg-white px-6 text-xs font-medium uppercase hover:bg-gray-100 leading-tight text-green-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-
+        //gray rounded outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded-full border-2 border-gray-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-gray-600 hover:bg-gray-100 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
-
+        //red rounded outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded-full border-2 border-red-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-red-600 hover:bg-gray-100 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //yellow rounded outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded-full border-2 border-yellow-600 bg-white px-6 text-xs font-medium uppercase leading-tight hover:bg-gray-100 text-yellow-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
+        //black rounded outline button
         <div class="flex items-center justify-center">
           <button class="success && flex h-9 items-center justify-center rounded-full border-2 border-black bg-white px-6 text-xs font-medium uppercase leading-tight text-black shadow-md hover:bg-gray-100 transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         </div>
@@ -196,10 +213,11 @@ export const formElementsData = {
           </div>
         ),
         code: `
+        //small button
         <button class="flex h-7 items-center justify-center rounded bg-blue-600 hover:bg-blue-800 px-5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
-
+        //regular button
         <button class="flex h-9 items-center justify-center rounded bg-blue-600 hover:bg-blue-800 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
-
+        //big button
         <button class="flex h-10 items-center justify-center rounded bg-blue-600 hover:bg-blue-800 px-8 text-lg font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         `,
       },
@@ -214,7 +232,9 @@ export const formElementsData = {
           </div>
         ),
         code: `
+        //disable blue
         <button class="flex h-9 cursor-not-allowed items-center justify-center rounded bg-blue-600 hover:bg-blue-800 px-6 text-xs font-medium uppercase leading-tight text-white opacity-60 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
+        //disable gray
         <button class="flex h-9 cursor-not-allowed items-center justify-center rounded bg-gray-600 hover:bg-gray-800 px-6 text-xs font-medium uppercase leading-tight text-white opacity-60 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
 
         `,
@@ -224,20 +244,21 @@ export const formElementsData = {
         description:
           "Use full width button to adjust it to the column width. Block buttons is more often used when creating layout for mobile devices.       ",
         src: (
-          <div className="flex flex-col gap-3 justify-center h-max w-full">
+          <div className="flex flex-col gap-3 justify-center h-max">
             <Button block />
             <Button variant="outline-primary" block />
           </div>
         ),
         code: `
-        <button class="mx-5 flex h-9 w-full items-center justify-center rounded bg-blue-600 px-6 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 hover:bg-blue-800 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
-
-        <button class="mx-5 flex h-9 w-full items-center justify-center rounded border-2 border-blue-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-blue-600 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none hover:bg-gray-100 focus:ring-0 active:shadow-lg">Button</button>
+        //full width fill button
+        <button class="mx-5 h-9 w-full rounded bg-blue-600 text-xs font-medium uppercase text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-800 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
+        //full width outline button
+        <button class="mx-5 h-9 w-full rounded border-2 border-blue-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-blue-600 shadow-md transition duration-150 ease-in-out hover:bg-gray-100 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         `,
       },
     ],
     intro: {
-      title: " Button Components for Tailwind",
+      title: " Button Components For Tailwind",
       description:
         " Responsive buttons built with Tailwind CSS. Buttons provide predefined styles for multiple button types: outline, rounded, social, floating,fixed, and more.",
     },
@@ -270,19 +291,20 @@ export const formElementsData = {
           </div>
         ),
         code: ` <div class="flex items-center justify-center text-left">
+        //small input
         <div class="mb-3 xl:w-96">
           <label for="formInput1" class="form-label mb-2 inline-block text-sm text-gray-700"> Label </label>
           <input class="form-control m-0 block h-8 w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding py-1.5 px-2 text-sm font-normal text-gray-700 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" />
         </div>
       </div>
-              
+        //regular input     
       <div class="flex items-center justify-center text-left">
         <div class="mb-3 xl:w-96">
           <label for="formInput1" class="form-label mb-2 inline-block text-gray-700"> Label </label>
           <input class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" />
         </div>
       </div>
-              
+          //big input    
       <div class="flex items-center justify-center text-left">
         <div class="">
           <label for="formInput1" class="form-label h mb-2 inline-block text-lg text-gray-700"> Label </label>
@@ -352,7 +374,7 @@ export const formElementsData = {
         code: `<div class="flex items-center justify-center text-left">
         <div class="mb-3 xl:w-96">
           <label for="formInput1" class="form-label mb-2 inline-block text-gray-700"> Label </label>
-            <input class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" />
+            <input class="form-control m-0 block w-full rounded border border-solid border-gray-300 bg-white bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" type="email" />
         </div>
     </div>
         `,
@@ -363,13 +385,13 @@ export const formElementsData = {
           "The input type='password' defines a password field thus hiding characters as sensitive information.",
         src: (
           <div className="flex gap-3 justify-center h-max">
-            <Input type="email" />
+            <Input type="password" />
           </div>
         ),
         code: `<div class="flex items-center justify-center text-left">
         <div class="mb-3 xl:w-96">
           <label for="formInput1" class="form-label mb-2 inline-block text-gray-700"> Label </label>
-          <input class="form-control bg-slate-100 m-0 block w-full rounded border border-solid border-gray-300 bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 opacity-80 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" disabled />
+          <input type="password" class="form-control bg-slate-100 m-0 block w-full rounded border border-solid border-gray-300 bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 opacity-80 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" />
         </div>
       </div>
       
@@ -386,15 +408,24 @@ export const formElementsData = {
         code: `<div class="flex items-center justify-center text-left">
         <div class="mb-3 xl:w-96">
           <label for="formInput1" class="form-label mb-2 inline-block text-gray-700"> Label </label>
-          <input class="form-control bg-slate-100 m-0 block w-full rounded border border-solid border-gray-300 bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 opacity-80 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" disabled />
+          <input class="form-control bg-slate-100 m-0 block w-full rounded border border-solid border-gray-300 bg-clip-padding py-1.5 px-2 text-base font-normal text-gray-700 opacity-80 transition ease-in-out first-letter:px-3 focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none" placeholder="Basic Input" type="number" />
         </div>
       </div>
       
+      //use css if you want to remove arrow from right
+      //   input[type="number"]::-webkit-inner-spin-button,
+      //   input[type="number"]::-webkit-outer-spin-button {
+      //  -webkit-appearance: none;
+      // -moz-appearance: none;
+      //  appearance: none;
+      //  margin: 0;
+}
+
         `,
       },
     ],
     intro: {
-      title: "Tailwind Inputs component.",
+      title: "Tailwind Inputs Component.",
       description:
         "Responsive inputs built with Tailwind CSS. Get data from the users in password inputs, text areas, email fields, and many more types of data. Free download",
     },
@@ -409,43 +440,22 @@ export const formElementsData = {
         src: (
           <RadioButton
             labelvalue1="mydata1"
-            labelvalue2="mydata2"
-            labelvalue3="radio1"
+            labelvalue2="mylable1"
+            labelvalue3="myname1"
           />
         ),
-        code: `
-        <div class="flex justify-center items-center py-5">
-           <div>
-             <div class="form-check form-check-inline">
-               <input
-                 class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:border-4 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                 type="radio"
-                 name="radio1" 
-               />
-               <label
-                 class="form-check-label inline-block text-gray-800",
-                 for='lable1'
-               >
-                 Default radio
-               </label>
-             </div>
-             <div class="form-check form-check-inline">
-               <input
-                 class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:border-4 checked:border-blue-600 disabled:border-blue-300 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                 type="radio"
-                 name="radio1"
-                 checked
-               />
-               <label
-                 class="form-check-label inline-block text-gray-800",
-                 for='lable2'
-               >
-                 Default checked radio
-               </label>
-             </div>
-           </div>
-         </div>
-        `,
+        code: `<div class="align-center flex justify-center py-5">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radioname" id="radioidone" />
+            <label class="form-check-label inline-block text-gray-800" for="radioidone"> Default radio </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-400" type="radio" name="radioname" id="radioidtwo" />
+            <label class="form-check-label inline-block text-gray-800" for="radioidtwo"> Default checked radio </label>
+          </div>
+        </div>
+      </div>`,
       },
       {
         title: "Disabled",
@@ -454,20 +464,20 @@ export const formElementsData = {
         src: (
           <RadioButton
             disabled
-            labelvalue1="mydata1"
-            labelvalue2="mydata2"
-            labelvalue3="radio2"
+            labelvalue1="mydata2"
+            labelvalue2="mylable2"
+            labelvalue3="myname2"
           />
         ),
-        code: `<div class="flex items-center justify-center py-5">
+        code: `<div class="align-center flex justify-center py-5">
         <div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radio1" disabled />
-            <label class="form-check-label inline-block text-gray-800" , for="lable1"> Default radio </label>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radioname" id="radioidone" disabled />
+            <label class="form-check-label inline-block text-gray-400 cursor-not-allowed" for="radioidone"> Default radio </label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-300" type="radio" name="radio1" checked disabled />
-            <label class="form-check-label inline-block text-gray-800" , for="lable2"> Default checked radio </label>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-400" type="radio" name="radioname" id="radioidtwo" checked disabled />
+            <label class="form-check-label inline-block text-gray-400 cursor-not-allowed" for="radioidtwo"> Default checked radio </label>
           </div>
         </div>
       </div>`,
@@ -480,45 +490,220 @@ export const formElementsData = {
           <RadioButton
             inline
             labelvalue1="mydata3"
-            labelvalue2="mydata4"
-            labelvalue3="radio3"
+            labelvalue2="mylable3"
+            labelvalue3="myname3"
           />
         ),
-        code: `<div class="flex items-center justify-center py-5">
+        code: `<div class="align-center flex justify-center py-5">
         <div class="flex gap-4">
           <div class="form-check">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radio1" />
-            <label class="form-check-label inline-block text-gray-800" for="lable1"> Default radio </label>
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radioname" id="radioidone" />
+            <label class="form-check-label inline-block text-gray-800" for="radioidone"> Default radio </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-300" type="radio" name="radio1" checked />
-            <label class="form-check-label inline-block text-gray-800" , for="lable2"> Default checked radio </label>
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-400" type="radio" name="radioname" id="radioidtwo"  />
+            <label class="form-check-label inline-block text-gray-800" for="radioidtwo"> Default checked radio </label>
+          </div>
+        </div>
+      </div>`,
+      },
+      {
+        title: "Default Checked",
+        description:
+          "Make any radio button default checked by passing checked as Props",
+        src: (
+          <RadioButton
+            checked
+            labelvalue1="mydata4"
+            labelvalue2="mylable4"
+            labelvalue3="myname4"
+          />
+        ),
+        code: `<div class="align-center flex justify-center py-5">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radioname" id="radioidone" />
+            <label class="form-check-label inline-block text-gray-800" for="radioidone"> Default radio </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-400" type="radio" name="radioname" id="radioidtwo" checked />
+            <label class="form-check-label inline-block text-gray-800" for="radioidtwo"> Default checked radio </label>
+          </div>
+        </div>
+      </div>      
+      `,
+      },
+    ],
+    intro: {
+      title: " Tailwind Radio Component  ",
+      description:
+        "Responsive radios built with Tailwind CSS. Limits the user to one selection, from a list of preset options. Free for commercial use, no registration required.",
+    },
+  },
+
+  checkbox: {
+    data: [
+      {
+        title: "Basic Examples",
+        description:
+          "Checkboxes are most often used for selecting multiple values from several options, or present a list containing sub-selections. They are most often found in surveys and forms.",
+        src: <CheckBox checkboxId1="checkbox1" checkboxId2="checkbox2" />,
+        code: `<div class="flex justify-center">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
           </div>
         </div>
       </div>
       `,
       },
       {
-        title: "Default Checked ",
+        title: "Disabled",
         description:
-          "Make any radio button default checked by passing checked as Props",
+          "Use the disabled attribute so the associated label will be automatically styled to match with a lighter color to help indicate the input state.",
         src: (
-          <RadioButton
-            checked
-            labelvalue1="mydata5"
-            labelvalue2="mydata6"
-            labelvalue3="radio4"
-          />
+          <CheckBox disabled checkboxId1="checkbox3" checkboxId2="checkbox4" />
         ),
-        code: `<div class="flex items-center justify-center py-5">
+        code: `<div class="flex justify-center">
         <div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none" type="radio" name="radio1" />
-            <label class="form-check-label inline-block text-gray-800" , for="lable1"> Default radio </label>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="checkbox1" disabled />
+            <label class="form-check-label inline-block cursor-not-allowed text-gray-400" for="checkbox1"> Default checkbox </label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer appearance-none rounded-full border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-4 checked:border-blue-600 focus:outline-none disabled:border-blue-300" type="radio" name="radio1" checked />
-            <label class="form-check-label inline-block text-gray-800" , for="lable2"> Default checked radio </label>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none disabled:bg-blue-400" type="checkbox" value="" id="checkbox2" checked onClick="!this.checked=this.checked;" disabled />
+            <label class="form-check-label inline-block cursor-not-allowed text-gray-400" for="checkbox2"> Checked checkbox </label>
+          </div>
+        </div>
+      </div>
+      `,
+      },
+
+      {
+        title: "Colorfull Checkbox",
+        description:
+          "Use the colorfull checkbox when you want checkbox color custome and appropriate to your work , must remember you change color by passing assent-color-[#..]",
+        src: (
+          <div className="flex justify-center gap-10">
+            <CheckBox
+              checkboxId1="checkbox5"
+              checkboxId2="checkbox6"
+              variant="alert"
+            />
+            <CheckBox
+              checkboxId1="checkbox7"
+              checkboxId2="checkbox8"
+              variant="success"
+            />
+            <CheckBox
+              checkboxId1="checkbox9"
+              checkboxId2="checkbox10"
+              variant="secondary"
+            />
+            <CheckBox
+              checkboxId1="checkbox11"
+              checkboxId2="checkbox12"
+              variant="yellow"
+            />
+            <CheckBox
+              checkboxId1="checkbox13"
+              checkboxId2="checkbox14"
+              variant="pink"
+            />
+          </div>
+        ),
+
+        code: ` <div class="flex justify-center gap-10">
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-rose-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input checked:bg--600 float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-rose-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
+          </div>
+        </div>
+      
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-green-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input checked:bg--600 float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-green-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
+          </div>
+        </div>
+      
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-gray-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input checked:bg--600 float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-gray-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
+          </div>
+        </div>
+      
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-yellow-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input checked:bg--600 float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-yellow-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
+          </div>
+        </div>
+        <div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-fuchsia-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> Default checkbox </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input checked:bg--600 float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:accent-fuchsia-600 focus:outline-none" type="checkbox" value="" id="flexCheckChecked" checked onClick="!this.checked=this.checked;" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckChecked"> Checked checkbox </label>
+          </div>
+        </div>
+      </div>
+        `,
+      },
+
+      {
+        title: "Inline Checkbox",
+        description:
+          "Use the group of maltiple checkbox which are align horizontaly",
+        src: (
+          <div className="flex justify-center gap-10">
+            <CheckBox inline />
+          </div>
+        ),
+
+        code: `<div class="flex justify-center">
+        <div class="flex gap-10">
+          <div class="form-check">
+            <input class="form-check-input mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> 1 </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> 2 </label>
+          </div>
+      
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> 3 </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input float-left mt-1 mr-2 h-4 w-4 cursor-pointer rounded-sm border border-gray-300 bg-white bg-contain bg-center bg-no-repeat align-top transition duration-200 checked:border-blue-600 checked:bg-blue-600 focus:outline-none" type="checkbox" value="" id="flexCheckDefault" onClick="!this.checked=this.checked;" checked />
+            <label class="form-check-label inline-block text-gray-800" for="flexCheckDefault"> None </label>
           </div>
         </div>
       </div>
@@ -526,9 +711,9 @@ export const formElementsData = {
       },
     ],
     intro: {
-      title: " Tailwind Radios component  ",
+      title: " Tailwind Checkbox Component",
       description:
-        "Responsive radios built with Tailwind CSS. Limits the user to one selection, from a list of preset options. Free for commercial use, no registration required.",
+        "Responsive checkbox built with Tailwind CSS. Limits the user to one selection, from a list of preset options. Free for commercial use, no registration required.",
     },
   },
 };

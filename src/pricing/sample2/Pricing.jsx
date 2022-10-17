@@ -8,15 +8,15 @@ import rightIcon from "./assets/right.svg";
 import rightWhiteIcon from "./assets/right-white-icon.svg";
 import blackIcon from "./assets/black-middle.svg";
 import banner from "./assets/banner.jpg";
+
+const staticValue = [
+  " Edit up to 1,000 hours of podcast audio files.",
+  "Set your own landing page",
+  "24/7 support",
+  "Advanced analytics",
+];
 export default function Pricing() {
   const [icon, setIcon] = useState("2");
-  const staticValue = [
-    " Edit up to 1,000 hours of podcast audio files.",
-    "Set your own landing page",
-    "24/7 support",
-    "Advanced analytics",
-  ];
-
   return (
     <>
       <div className="relative bg-white">

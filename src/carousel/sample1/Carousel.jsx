@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./style.css";
 import image1 from "./assets/img1.jpg";
 import image2 from "./assets/img2.jpg";
 import image3 from "./assets/img3.jpg";
@@ -7,10 +6,9 @@ import image4 from "./assets/img4.jpg";
 import leftIcon from "./assets/left.svg";
 import rightIcon from "./assets/right.svg";
 
+const images = [image1, image2, image3, image4];
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = [image1, image2, image3, image4];
-
   const decreseIndex = () => {
     if (currentIndex <= 0) {
       setCurrentIndex(0);
@@ -40,7 +38,7 @@ export default function Carousel() {
                   <img
                     src={img}
                     alt="not found"
-                    className="temporary-bounce animate-pulse"
+                    className="object-cover w-full"
                   />
                 );
               } else return null;

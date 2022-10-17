@@ -47,7 +47,7 @@ export const applicationUiData = {
         view: "preview",
         width: "100%",
         path: "credit-card/sample1",
-        name: "Credit card Sample 1",
+        name: "Credit Card Sample 1",
         code: require("!!raw-loader!../credit-card/sample1/CreditCard.jsx").default.toString(),
       },
       {

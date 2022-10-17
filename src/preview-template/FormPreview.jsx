@@ -13,7 +13,7 @@ const FormPreview = () => {
   const value = location.pathname;
   const scrollView = value.split("/")[1];
 
-  const { buttons, inputs, radioButtons } = formElementsData;
+  const { buttons, inputs, radioButtons, checkbox } = formElementsData;
   let elements, intro;
   switch (module) {
     case "buttons":
@@ -28,6 +28,10 @@ const FormPreview = () => {
       elements = radioButtons.data;
       intro = radioButtons.intro;
       break;
+    case "checkbox":
+      elements = checkbox.data;
+      intro = checkbox.intro;
+      break;
     default:
       elements = [];
       intro = null;
@@ -40,7 +44,7 @@ const FormPreview = () => {
   return (
     <>
       <Header module={scrollView} />
-      <div className="flex flex-col gap-3 h-screen  px-24 text-left">
+      <div className="container mx-auto flex flex-col gap-3 h-screen text-left">
         <div className="flex flex-col gap-3 border-b border-gray-200 py-6 mb-5">
           <span className="text-xs font-extrabold text-gray-400  cursor-pointer">
             <Link to="/">Form Elements </Link>/ {moduleName}

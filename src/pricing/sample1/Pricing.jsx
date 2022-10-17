@@ -2,18 +2,19 @@ import React from "react";
 import offerSvg from "./assets/offer.svg";
 import rightIcon from "./assets/right-icon.svg";
 import wrongIcon from "./assets/wrong-icon.svg";
+
+let trueData = [
+  "20,000+ of PNG & SVG graphics",
+  "Access to 100 million stock images",
+  "Upload custom icons and fonts",
+  "Unlimited Sharing",
+  "Unlimited Projects",
+];
+let falseData = [
+  "Instant Access to our design system",
+  "Create teams to collaborate on designs",
+];
 const Pricing = () => {
-  let trueData = [
-    "20,000+ of PNG & SVG graphics",
-    "Access to 100 million stock images",
-    "Upload custom icons and fonts",
-    "Unlimited Sharing",
-    "Unlimited Projects",
-  ];
-  let falseData = [
-    "Instant Access to our design system",
-    "Create teams to collaborate on designs",
-  ];
   return (
     <container className="flex flex-col justify-center items-center py-[72px]">
       {/* heading section  */}

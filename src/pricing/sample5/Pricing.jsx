@@ -31,7 +31,7 @@ const pricingData = [
   },
   {
     mainTitle: "Business",
-    price: "$10",
+    price: "$20",
     infoNote:
       "Advanced features and reporting, better workflows and automation.",
     "Basic Feature": true,
@@ -44,7 +44,7 @@ const pricingData = [
   },
   {
     mainTitle: "Enterprise",
-    price: "$10",
+    price: "$30",
     infoNote: "Personalised service and enterprise security for large teams.",
     "Basic Feature": true,
     Users: "Unlimited",
