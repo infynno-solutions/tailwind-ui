@@ -17,12 +17,17 @@ import RadioButton from "./Form/RadioButton";
 import Switch from "./Form/Switch";
 import Select from "./Form/Select";
 import FormPreview from "./preview-template/FormPreview";
+import Carousel1 from "./carousel/sample1/Carousel";
+import Carousel2 from "./carousel/sample2/Carousel";
+import Pricing5 from "./pricing/sample5/Pricing";
+import CheckBox from "./Form/CheckBox";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:module" element={<Home />} />
         <Route path="/credit-card/sample1" element={<Sample1 />} />
         <Route path="/credit-card/sample2" element={<Sample2 />} />
         <Route path="/credit-card/sample3" element={<Sample3 />} />
@@ -30,15 +35,19 @@ function App() {
         <Route path="/pricing/sample2" element={<Pricing2 />} />
         <Route path="/pricing/sample3" element={<Pricing3 />} />
         <Route path="/pricing/sample4" element={<Pricing4 />} />
-        <Route path="/preview/:module" element={<PreviewTemplate />} />
-        <Route path="/form-preview/:module" element={<FormPreview />} />
+        <Route path="/application-ui/:module" element={<PreviewTemplate />} />
+        <Route path="/form-elements/:module" element={<FormPreview />} />
         <Route path="/buttons" element={<Button />} />
         <Route path="/inputs" element={<Input />} />
+        <Route path="/checkbox" element={<CheckBox />} />
         <Route path="/date-picker" element={<DatePicker />} />
         <Route path="/radio-button" element={<RadioButton />} />
         <Route path="/switch" element={<Switch />} />
         <Route path="/select" element={<Select />} />
         <Route path="/undefined" element={<Undefined />} />
+        <Route path="/carousel/sample1" element={<Carousel1 />} />
+        <Route path="/carousel/sample2" element={<Carousel2 />} />
+        <Route path="/pricing/sample5" element={<Pricing5 />} />
       </Routes>
     </div>
   );

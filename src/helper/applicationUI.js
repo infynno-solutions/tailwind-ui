@@ -31,6 +31,13 @@ export const applicationUiData = {
         name: "Pricing Sample 4",
         code: require("!!raw-loader!../pricing/sample4/Pricing.jsx").default.toString(),
       },
+      {
+        view: "preview",
+        width: "100%",
+        path: "pricing/sample5",
+        name: "Pricing Sample 5",
+        code: require("!!raw-loader!../pricing/sample5/Pricing.jsx").default.toString(),
+      },
     ],
   },
 
@@ -40,7 +47,7 @@ export const applicationUiData = {
         view: "preview",
         width: "100%",
         path: "credit-card/sample1",
-        name: "Credit card Sample 1",
+        name: "Credit Card Sample 1",
         code: require("!!raw-loader!../credit-card/sample1/CreditCard.jsx").default.toString(),
       },
       {
@@ -56,6 +63,24 @@ export const applicationUiData = {
         path: "credit-card/sample3",
         name: "Credit card Sample 3",
         code: require("!!raw-loader!../credit-card/sample3/CreditCard.jsx").default.toString(),
+      },
+    ],
+  },
+  carousel: {
+    data: [
+      {
+        view: "preview",
+        width: "100%",
+        path: "carousel/sample1",
+        name: "Carousel Sample 1",
+        code: require("!!raw-loader!../carousel/sample1/Carousel.jsx").default.toString(),
+      },
+      {
+        view: "preview",
+        width: "100%",
+        path: "carousel/sample2",
+        name: "Carousel Sample 2",
+        code: require("!!raw-loader!../carousel/sample2/Carousel.jsx").default.toString(),
       },
     ],
   },

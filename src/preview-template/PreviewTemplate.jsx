@@ -6,7 +6,7 @@ import {
   AiOutlineDesktop,
 } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "../Home/Header";
 import { applicationUiData } from "../helper/applicationUI";
@@ -15,6 +15,10 @@ const PreviewTemplate = () => {
   const { module } = useParams();
   const moduleName = module.charAt(0).toUpperCase() + module.slice(1);
   const [moduleData, setModuleData] = useState([]);
+
+  const location = useLocation();
+  const value = location.pathname;
+  const scrollView = value.split("/")[1];
 
   const changeWidth = (index, width) => {
     const d = [...moduleData];
@@ -40,6 +44,9 @@ const PreviewTemplate = () => {
       case "credit-card":
         setModuleData(applicationUiData.creditCard.data);
         break;
+      case "carousel":
+        setModuleData(applicationUiData.carousel.data);
+        break;
       default:
         return null;
     }
@@ -47,8 +54,8 @@ const PreviewTemplate = () => {
 
   return (
     <>
-      <Header />
-      <div className="h-max bg-slate-100 px-10">
+      <Header module={scrollView} />
+      <div className="h-max bg-slate-100 container mx-auto">
         <div className="flex flex-col text-3xl font-bold text-left px-5 py-7 border-b border-gray-200">
           <span className="text-xs text-gray-400 mb-2 cursor-pointer">
             <Link to="/">Application UI </Link>/ {moduleName}
