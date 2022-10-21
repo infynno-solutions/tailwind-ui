@@ -6,6 +6,7 @@ import carouselBg from "./assets/carousel-bg.jpg";
 import buttonBg from "./assets/button-bg.jpg";
 import inputBg from "./assets/input-bg.jpg";
 import radioBg from "./assets/radio-bg.jpg";
+import cardsBg from "./assets/bg-cards.png";
 import checkBoxBg from "./assets/checkbox-bg.png";
 import Footer from "./Home/Footer";
 import Header from "./Home/Header";
@@ -63,6 +64,12 @@ const Home = () => {
       components: 2,
       path: "/application-ui/carousel",
       background: carouselBg,
+    },
+    {
+      name: "Card Layout",
+      components: 1,
+      path: "/application-ui/card-layout",
+      background: cardsBg,
     },
   ];
   useEffect(() => {

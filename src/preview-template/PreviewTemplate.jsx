@@ -47,6 +47,9 @@ const PreviewTemplate = () => {
       case "carousel":
         setModuleData(applicationUiData.carousel.data);
         break;
+      case "card-layout":
+        setModuleData(applicationUiData.cardLayout.data);
+        break;
       default:
         return null;
     }
