@@ -84,4 +84,15 @@ export const applicationUiData = {
       },
     ],
   },
+  cardLayout: {
+    data: [
+      {
+        view: "preview",
+        width: "100%",
+        path: "Card-layout/sample1",
+        name: "Card Layout Sample 1",
+        code: require("!!raw-loader!../card-layout/sample1/Card.jsx").default.toString(),
+      },
+    ],
+  },
 };
