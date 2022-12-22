@@ -3,9 +3,11 @@ import Logo from "../assets/Logo.svg";
 import { Link } from "react-router-dom";
 const Header = ({ module }) => {
   return (
-    <div className="flex container mx-auto justify-between items-center font-semibold h-[90px] px-10 md:px-16 xl:px-0 py-8 bg-white border-b border-gray-200">
+    <div className="flex container mx-auto justify-center md:justify-between items-center font-semibold h-[90px] px-10 md:px-16 xl:px-0 py-8 bg-white border-b border-gray-200 ">
       <a href="/">
-        <img src={Logo} alt="Main logo" className="h-24 w-40" />
+        <div className="w-48 relative object-cover ml-[-15px] ">
+          <img src={Logo} alt="Main logo" />
+        </div>
       </a>
       <div className="flex items-center">
         <span className="mr-10 cursor-pointer hover:text-blue-700 sm:flex hidden">
