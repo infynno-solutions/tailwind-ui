@@ -256,6 +256,108 @@ export const formElementsData = {
         <button class="mx-5 h-9 w-full rounded border-2 border-blue-600 bg-white px-6 text-xs font-medium uppercase leading-tight text-blue-600 shadow-md transition duration-150 ease-in-out hover:bg-gray-100 hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">Button</button>
         `,
       },
+
+      {
+        title: "Buttons with hover effects",
+        description: "When user want effect on hover use below button",
+        src: (
+          <div className="flex gap-5 justify-center h-max">
+            <div>
+              <button class="relative inline-flex items-center justify-center  p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+                <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+                <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
+                  <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
+                  <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
+                </span>
+                <span class="relative text-white">BUTTON </span>
+              </button>
+            </div>
+            <div>
+              <button class="relative inline-block px-4 py-2 font-medium group">
+                <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-teal-900 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span class="absolute inset-0 w-full h-full bg-white border-2 border-teal-900 group-hover:bg-teal-900"></span>
+                <span class="relative text-teal-900 group-hover:text-white">
+                  BUTTON
+                </span>
+              </button>
+            </div>
+            <div>
+              <button className="rounded px-5 py-2.5 overflow-hidden group bg-cyan-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-cyan-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-cyan-400 transition-all ease-out duration-300">
+                <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                <span className="relative">BUTTON</span>
+              </button>
+            </div>
+            <div>
+              <button class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+                <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+                <span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+                <span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+                <span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+                <span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+                <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
+                  BUTTON
+                </span>
+              </button>
+            </div>
+            <div>
+              <button className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-pink-600 active:shadow-none shadow-lg bg-gradient-to-tr from-pink-600 to-pink-500 border-pink-700 text-white">
+                <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"></span>
+                <span className="relative">BUTTON</span>
+              </button>
+            </div>
+          </div>
+        ),
+        code: `
+        //Button with pink and purple color
+        <div>
+        <button class="relative inline-flex items-center justify-center  p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+          <span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+          <span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
+            <span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
+            <span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
+          </span>
+          <span class="relative text-white">BUTTON </span>
+        </button>
+      </div>
+      //button with shadow 
+      <div>
+        <button class="relative inline-block px-4 py-2 font-medium group">
+          <span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-teal-900 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-white border-2 border-teal-900 group-hover:bg-teal-900"></span>
+          <span class="relative text-teal-900 group-hover:text-white">
+            BUTTON
+          </span>
+        </button>
+      </div>
+      //sky button with transpertant slide
+      <div>
+        <button className="rounded px-5 py-2.5 overflow-hidden group bg-cyan-500 relative hover:bg-gradient-to-r hover:from-cyan-500 hover:to-cyan-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-cyan-400 transition-all ease-out duration-300">
+          <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+          <span className="relative">BUTTON</span>
+        </button>
+      </div>
+      //button with black transition 
+      <div>
+        <button class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+          <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+          <span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+          <span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+          <span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+          <span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+          <span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">
+            BUTTON
+          </span>
+        </button>
+      </div>
+      //button with pink color
+      <div>
+        <button className="rounded relative inline-flex group items-center justify-center px-3.5 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-pink-600 active:shadow-none shadow-lg bg-gradient-to-tr from-pink-600 to-pink-500 border-pink-700 text-white">
+          <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-32 group-hover:h-32 opacity-10"></span>
+          <span className="relative">BUTTON</span>
+        </button>
+      </div>
+        `,
+      },
     ],
     intro: {
       title: " Button Components For Tailwind",

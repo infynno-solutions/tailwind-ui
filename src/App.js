@@ -22,6 +22,7 @@ import Carousel2 from "./carousel/sample2/Carousel";
 import Pricing5 from "./pricing/sample5/Pricing";
 import CheckBox from "./Form/CheckBox";
 import Cards from "./card-layout/sample1/Card";
+import Animation from "./animation/sample1/animation";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/carousel/sample2" element={<Carousel2 />} />
         <Route path="/pricing/sample5" element={<Pricing5 />} />
         <Route path="/card-layout/sample1" element={<Cards />} />
+        <Route path="/animation/sample1" element={<Animation />} />
       </Routes>
     </div>
   );

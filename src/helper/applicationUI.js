@@ -95,4 +95,15 @@ export const applicationUiData = {
       },
     ],
   },
+  animationUI: {
+    data: [
+      {
+        view: "preview",
+        width: "100%",
+        path: "animation/sample1",
+        name: "Animation Layouts",
+        code: require("!!raw-loader!../animation/sample1/animation.jsx").default.toString(),
+      },
+    ],
+  },
 };
