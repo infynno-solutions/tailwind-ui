@@ -7,6 +7,7 @@ import buttonBg from "./assets/button-bg.jpg";
 import inputBg from "./assets/input-bg.jpg";
 import radioBg from "./assets/radio-bg.jpg";
 import cardsBg from "./assets/bg-cards.png";
+import animation from "./assets/animation.gif";
 import checkBoxBg from "./assets/checkbox-bg.png";
 import Footer from "./Home/Footer";
 import Header from "./Home/Header";
@@ -70,6 +71,12 @@ const Home = () => {
       components: 1,
       path: "/application-ui/card-layout",
       background: cardsBg,
+    },
+    {
+      name: "Animation UI",
+      components: 1,
+      path: "/application-ui/animation",
+      background: animation,
     },
   ];
   useEffect(() => {

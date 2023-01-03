@@ -50,6 +50,9 @@ const PreviewTemplate = () => {
       case "card-layout":
         setModuleData(applicationUiData.cardLayout.data);
         break;
+      case "animation":
+        setModuleData(applicationUiData.animationUI.data);
+        break;
       default:
         return null;
     }

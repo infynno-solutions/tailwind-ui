@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.progress {
+  @apply h-8 w-8 bg-pink-600 rounded-full animate-bounce;
+}
+.progress:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.progress:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.progress:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.buttonone {
+  animation: wiggle 2s linear infinite;
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+/* 
+.demo {
+  animation: myspin 5s linear infinite reverse;
+}
+@keyframes myspin {
+  from {
+    transform: rotate(-360deg);
+    transition-duration: 10s;
+    animation-timeline: 20s;
+  }
+  to {
+    transform: rotate(360deg);
+    animation-duration: 10s;
+  }
+} */
+
+/* Square css */
+.square {
+  animation-name: grow-shrink;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes grow-shrink {
+  40% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.5);
+  }
+}
+
+.rotateHorizontal {
+  animation: flip 7s linear infinite;
+}
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+.verticleFlip {
+  animation: flipone 7s linear infinite;
+}
+@keyframes flipone {
+  0% {
+    transform: rotateX(0deg);
+  }
+  80% {
+    transform: rotateX(360deg);
+  }
+}
+
+.halfCircle {
+  animation: spindemo 5s linear infinite;
+}
+
+@keyframes spindemo {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-90deg);
+  }
+}
+
+/* css for 3 dots */
+
+.b-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  flex-direction: row;
+}
+
+.b-container .ball {
+  background-color: #5b2c6f;
+  border-radius: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  animation: jump 0.7s ease-in-out infinite;
+}
+
+.b-container .ball:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.b-container .ball:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
