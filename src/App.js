@@ -40,6 +40,7 @@ function App() {
         <Route path="/application-ui/:module" element={<PreviewTemplate />} />
         <Route path="/form-elements/:module" element={<FormPreview />} />
         <Route path="/buttons" element={<Button />} />
+        <Route path="/animatedButtons" />
         <Route path="/inputs" element={<Input />} />
         <Route path="/checkbox" element={<CheckBox />} />
         <Route path="/date-picker" element={<DatePicker />} />

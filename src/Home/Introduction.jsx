@@ -28,7 +28,7 @@ const Introduction = () => {
             <FaHtml5 color="#dc2626" />
             <span className="mr-5 text-[#e4e4e7]">
               <a
-                href="https:infynno.com/service/web-development/"
+                href="https://infynno.com/service/web-development/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -38,7 +38,7 @@ const Introduction = () => {
             <FaReact color="#0ea5e9" />
             <span className="mr-3 text-[#e4e4e7]">
               <a
-                href="https:infynno.com/service/reactjs-development/"
+                href="https://infynno.com/service/reactjs-development/"
                 target="_blank"
                 rel="noreferrer"
               >

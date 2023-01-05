@@ -13,12 +13,18 @@ const FormPreview = () => {
   const value = location.pathname;
   const scrollView = value.split("/")[1];
 
-  const { buttons, inputs, radioButtons, checkbox } = formElementsData;
+  const { buttons, animatedButtons, inputs, radioButtons, checkbox } =
+    formElementsData;
   let elements, intro;
   switch (module) {
     case "buttons":
       elements = buttons.data;
       intro = buttons.intro;
+      break;
+
+    case "animatedButtons":
+      elements = animatedButtons.data;
+      intro = animatedButtons.intro;
       break;
     case "inputs":
       elements = inputs.data;
@@ -44,7 +50,7 @@ const FormPreview = () => {
   return (
     <>
       <Header module={scrollView} />
-      <div className="container mx-auto flex flex-col gap-3 h-screen text-left">
+      <div className="container mx-auto flex flex-col px-4 gap-3 h-screen text-left">
         <div className="flex flex-col gap-3 border-b border-gray-200 py-6 mb-5">
           <span className="text-xs font-extrabold text-gray-400  cursor-pointer">
             <Link to="/">Form Elements </Link>/ {moduleName}
@@ -52,40 +58,77 @@ const FormPreview = () => {
           <span className="text-4xl font-bold">{intro.title}</span>
           <span className="text-gray-600">{intro.description}</span>
         </div>
-
-        {elements.map((variant, index) => {
-          return (
-            <div>
-              <div className="flex flex-col border-b gap-4 border-gray-200 pb-4">
-                <span className="text-2xl font-semibold">{variant.title}</span>
-                <span>{variant.description}</span>
-              </div>
-              <div className="border border-gray-200 h-max">
-                <div className="p-7">{variant.src}</div>
-                <div className="flex justify-center border-t border-gray-200 p-7">
-                  {collapse === index ? (
-                    <div
-                      className="text-blue-600 cursor-pointer"
-                      onClick={() => setCollapse(null)}
-                    >
-                      HIDE CODE
-                    </div>
-                  ) : (
-                    <div
-                      className="text-blue-600 cursor-pointer"
-                      onClick={() => setCollapse(index)}
-                    >
-                      SHOW CODE
-                    </div>
-                  )}
-                </div>
+        {moduleName !== "AnimatedButtons" ? (
+          <div>
+            {elements.map((variant, index) => {
+              return (
                 <div>
-                  {collapse === index && <Codeblock code={variant.code} />}
+                  <div className="flex flex-col border-b gap-4 border-gray-200 pb-4">
+                    <span className="text-2xl font-semibold">
+                      {variant.title}
+                    </span>
+                    <span>{variant.description}</span>
+                  </div>
+                  <div className="border border-gray-200 h-max">
+                    <div className="p-7">{variant.src}</div>
+                    <div className="flex justify-center border-t border-gray-200 p-7">
+                      {collapse === index ? (
+                        <div
+                          className="text-blue-600 cursor-pointer"
+                          onClick={() => setCollapse(null)}
+                        >
+                          HIDE CODE
+                        </div>
+                      ) : (
+                        <div
+                          className="text-blue-600 cursor-pointer"
+                          onClick={() => setCollapse(index)}
+                        >
+                          SHOW CODE
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      {collapse === index && <Codeblock code={variant.code} />}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              );
+            })}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-4">
+            {elements.map((variant, index) => {
+              return (
+                <>
+                  <div className="border border-gray-200 h-max">
+                    <div className="p-7">{variant.src}</div>
+                    <div className="flex justify-center border-t border-gray-200 p-7">
+                      {collapse === index ? (
+                        <div
+                          className="text-blue-600 cursor-pointer"
+                          onClick={() => setCollapse(null)}
+                        >
+                          HIDE CODE
+                        </div>
+                      ) : (
+                        <div
+                          className="text-blue-600 cursor-pointer"
+                          onClick={() => setCollapse(index)}
+                        >
+                          SHOW CODE
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      {collapse === index && <Codeblock code={variant.code} />}
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+        )}
         <Footer />
       </div>
     </>
