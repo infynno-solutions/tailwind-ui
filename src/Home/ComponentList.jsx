@@ -9,7 +9,7 @@ const ComponentList = ({ components }) => {
           return (
             <Link to={`${comp?.path}`}>
               <div
-                className="flex flex-col gap-1 group hover:bg-teal-50 p-2 rounded-lg cursor-pointer shadow-md hover:shadow-none"
+                className="flex flex-col gap-1 group bg-white hover:bg-teal-50 p-2 rounded-lg cursor-pointer shadow-md hover:shadow-none"
                 title={comp.name}
               >
                 {comp.background ? (
