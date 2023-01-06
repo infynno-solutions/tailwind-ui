@@ -16,6 +16,7 @@ import ComponentList from "./Home/ComponentList";
 import Introduction from "./Home/Introduction";
 import { applicationUiData } from "./helper/applicationUI";
 import { useSearchParams } from "react-router-dom";
+import formElementsBg from "./assets/formElementsBg.jpg";
 
 const Home = () => {
   const [test] = useSearchParams();
@@ -92,35 +93,44 @@ const Home = () => {
     }
   }, [scrollView]);
   return (
-    <div className=" w-full bg-white">
+    <div className="w-full bg-white">
       <Header />
       <Introduction />
-      <div
-        className="container mx-auto border-t border-gray-200 md:px-16 px-4 py-10"
-        id="home"
-      >
-        <div
-          className="flex flex-col md:gap-5 gap-3 text-left mb-10"
-          id="application-ui"
-        >
-          <span className="text-xl font-semibold">Application UI</span>
-          <span className="text-gray-600">
-            Pricing, Modals and Credit card components - everything you need to
-            build beautiful responsive web applications.
-          </span>
+      <div className="border-t border-gray-200 py-10" id="home">
+        <div className="" id="application-ui">
+          <div className="container mx-auto flex flex-col md:gap-5 gap-3 text-left mb-10 md:px-16 px-4">
+            <span className="text-2xl font-semibold">Application UI</span>
+            <span className="text-gray-600">
+              Pricing, Modals and Credit card components - everything you need
+              to build beautiful responsive web applications.
+            </span>
+            <ComponentList components={applicationUi} />
+          </div>
         </div>
-        <ComponentList components={applicationUi} />
         <div
-          className="flex flex-col md:gap-5 gap-3 text-left mb-10 "
+          className="flex flex-col md:gap-5 gap-3 text-left mb-10 container mx-auto  md:px-16 px-4"
           id="form-elements"
         >
-          <span className="text-xl font-semibold">Form Elements</span>
+          <span className="text-2xl font-semibold">Form Elements</span>
           <span className="text-gray-600">
             Buttons, Inputs and Radio buttons components - everything you need
             to build beautiful responsive web applications.
           </span>
         </div>
-        <ComponentList components={elements} />
+        <div className="xl:relative w-full  xl:bg-black bg-none xl:pt-[830px] xl:h-0 ">
+          <div className="container mx-auto">
+            <div className="top-0 left-0 right-0 bottom-0 xl:absolute  opacity-50  ">
+              <img
+                src={formElementsBg}
+                alt="not found"
+                className="h-[830px] object-cover w-full xl:block hidden"
+              />
+            </div>
+            <div className="xl:absolute top-0 md:px-16 px-4  container ">
+              <ComponentList components={elements} />
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>
